@@ -11,7 +11,7 @@ public class showonscreentext : MonoBehaviour
     public TextAsset textasset;
     public string[] dialauge;
     public float textSpeed = 0.05f;
-
+    bool continueText;
     // Update is called once per frame
     void Update()
     {
@@ -34,10 +34,23 @@ public class showonscreentext : MonoBehaviour
             for (int c = 0; c < currenttext.Length; c++)
             {
                 text.text += currenttext[c]; // breaks the line into numbered letters so they can be displayed one by one
+                Debug.Log("Working");
                 yield return new WaitForSeconds(textSpeed); // waits based on the text speed
             }
-
+            
             yield return new WaitForSeconds(1);
+           
+            continueText = true;
+
+            while (continueText)
+            {
+                
+                if (Input.GetKey("w"))
+                {
+                    continueText = false;
+                }
+                yield return null;
+            }
             text.text = string.Empty; // at the end of all the lines it sets the text box to empty
         }
         dialaugeCanvus.SetActive(false);// turns off the canvus
