@@ -32,7 +32,7 @@ public class ItemScriptXXViewingText : MonoBehaviour
             showtext = false; // stops the text from being activated more then once
             dialaugeCanvus.SetActive(true); // turns on the canvus
             dialauge = (textasset.text.Split('\n')); // splits the entire text doc by when ever the enter button is pressed
-
+            
             StartCoroutine(slowtext()); // starts the coroutine
         }
  

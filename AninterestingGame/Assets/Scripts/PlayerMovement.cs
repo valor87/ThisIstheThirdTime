@@ -6,10 +6,10 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    bool idleright;
-    bool idleleft;
-    bool idledown;
-    bool idleup;
+    public bool idleright;
+    public bool idleleft;
+    public bool idledown;
+    public bool idleup;
 
     public float speed = 5;
     public bool canMove = true;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         PA.SetBool("IdleRight", idleright);
         PA.SetBool("IdleUp", idleup);
         PA.SetBool("IdleDown", idledown);
-
+        
         if (canMove)
         {
             transform.position += Vector3.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime;
@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            idleup = idlechange(0); idledown = idlechange(0); idleleft = idlechange(0); idleright = idlechange(0);
+           idleup = idlechange(0); idledown = idlechange(0); idleleft = idlechange(0); idleright = idlechange(0);
         }
     }
 
