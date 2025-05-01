@@ -18,13 +18,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PA.SetBool("IdleLeft", idleleft);
-        PA.SetBool("IdleRight", idleright);
-        PA.SetBool("IdleUp", idleup);
-        PA.SetBool("IdleDown", idledown);
+        
         
         if (canMove)
         {
+            PA.SetBool("IdleLeft", idleleft);
+            PA.SetBool("IdleRight", idleright);
+            PA.SetBool("IdleUp", idleup);
+            PA.SetBool("IdleDown", idledown);
+
             transform.position += Vector3.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime;
             transform.position += Vector3.up * Input.GetAxis("Vertical") * speed * Time.deltaTime;
         }

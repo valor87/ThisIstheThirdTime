@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,9 +41,7 @@ public class simonsaysscript : MonoBehaviour
 
         if (!Lists(NewCode.Count) && PlayersCode.Count == NewCode.Count) // if the code was wrong
         {
-            NewCode.Clear(); // clear the given code
-            PlayersCode.Clear(); // clear player code
-            StartCoroutine(PickCode()); // restart the pick code corutine
+            ResetValues();
         }
     }
 
@@ -59,6 +58,17 @@ public class simonsaysscript : MonoBehaviour
         PlayersCode.Add(yellowlight); // add the yellow light to the list
     }
 
+    public void ResetTheCode()
+    {
+        ResetValues();
+    }
+    private void ResetValues()
+    {
+        text.SetActive(false);
+        NewCode.Clear(); // clear the given code
+        PlayersCode.Clear(); // clear player code
+        StartCoroutine(PickCode()); // restart the pick code corutine
+    }
     IEnumerator PickCode()
     {
         redlight.GetComponent<Image>().color = trasparentred; // makes the red button slightly transparent
