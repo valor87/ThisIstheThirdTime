@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class simonsaysscript : MonoBehaviour
 {
@@ -22,6 +24,7 @@ public class simonsaysscript : MonoBehaviour
     public List<GameObject> NewCode;
     public List<GameObject> PlayersCode;
 
+    public GameObject canvus;
     public GameObject text;
     public int howmanytimes;
 
@@ -34,6 +37,7 @@ public class simonsaysscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Lists(NewCode.Count)) // if the function list is true
         {
             text.SetActive(true); // turn on text
@@ -41,7 +45,19 @@ public class simonsaysscript : MonoBehaviour
 
         if (!Lists(NewCode.Count) && PlayersCode.Count == NewCode.Count) // if the code was wrong
         {
-            ResetValues();
+            ResetValues(); // resets all lists 
+        }
+        if (redbutton.GetComponent<Button>().enabled == false)
+        {
+            redbutton.GetComponent<Image>().color = trasparentred; // takes the color from the button
+            bluebutton.GetComponent<Image>().color = trasparentblue; // takes the color from the button
+            yellowbutton.GetComponent<Image>().color = trasparentyellow; // takes the color from the button
+        }
+        else
+        {
+            redbutton.GetComponent<Image>().color = Color.red; // give the color back to the button
+            bluebutton.GetComponent<Image>().color = Color.blue; // give the color back to the button
+            yellowbutton.GetComponent<Image>().color = Color.yellow; // give the color back to the button
         }
     }
 
@@ -60,7 +76,7 @@ public class simonsaysscript : MonoBehaviour
 
     public void ResetTheCode()
     {
-        ResetValues();
+        ResetValues(); // resets all lists
     }
     private void ResetValues()
     {
@@ -68,6 +84,10 @@ public class simonsaysscript : MonoBehaviour
         NewCode.Clear(); // clear the given code
         PlayersCode.Clear(); // clear player code
         StartCoroutine(PickCode()); // restart the pick code corutine
+    }
+    public void ExitGame()
+    {
+        canvus.SetActive(false); // turns off the canvus
     }
     IEnumerator PickCode()
     {
@@ -77,6 +97,10 @@ public class simonsaysscript : MonoBehaviour
 
         for (int x = 0; x < howmanytimes; x++)
         {
+            redbutton.GetComponent<Button>().enabled = false; // stop input to the buttons
+            bluebutton.GetComponent<Button>().enabled = false; // stop input to the buttons
+            yellowbutton.GetComponent<Button>().enabled = false; // stop input to the buttons
+
             int _temp = Random.Range(1, 4); // picks a random number from 1 to 3
             if (_temp == 1) 
             {
@@ -97,9 +121,13 @@ public class simonsaysscript : MonoBehaviour
             redlight.GetComponent<Image>().color = trasparentred; // reset red light
             yellowlight.GetComponent<Image>().color = trasparentyellow; // reset yellow light
             bluelight.GetComponent<Image>().color = trasparentblue; // reset blue light
-            yield return new WaitForSeconds(.5f); // wait half a second
+            if (x != howmanytimes) {
+                yield return new WaitForSeconds(.5f); // wait half a second
+            }
         }
-       
+        redbutton.GetComponent<Button>().enabled = true; // gives input back to the buttons
+        bluebutton.GetComponent<Button>().enabled = true; // gives input back to the buttons
+        yellowbutton.GetComponent<Button>().enabled = true; // gives input back to the buttons
     }
 
     public bool Lists(int numofcode)
