@@ -13,8 +13,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 5;
     public bool canMove = true;
-
+    Rigidbody2D Rb;
+    
     public Animator PA;
+     void Start()
+    {
+    
+    }
     // Update is called once per frame
     void Update()
     {
