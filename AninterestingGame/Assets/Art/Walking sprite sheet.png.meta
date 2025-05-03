@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e0a1d9e389593294e9e124798ac4b97d
+guid: dfd57c95196d18049b0c66396121a4d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_0
+      name: Walking sprite sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 96
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 348b3742f4fe6f645ae3e9726d0a24cb
-      internalID: -118175969
+      spriteID: bd246c869c6e93441af98c26cd33bf21
+      internalID: 701950383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_1
+      name: Walking sprite sheet_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 96
-        width: 16
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc7870372cca53f4682ff68334e16892
-      internalID: 2024149388
+      spriteID: 026c018db51b65345b8e4ce5db0c9df6
+      internalID: -130396737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_2
+      name: Walking sprite sheet_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 96
-        width: 16
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a964ca3426eeaee4386db83ad3dea9c3
-      internalID: 1489142634
+      spriteID: 0869750261a576f419b98a2243a14bcb
+      internalID: -750570889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_3
+      name: Walking sprite sheet_3
       rect:
         serializedVersion: 2
         x: 48
         y: 96
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f474b5b617946a4cbc09ce924dff370
-      internalID: -1251707204
+      spriteID: c646e20f8b8b2aa4e84ed5e4d0b5e204
+      internalID: 135601215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_4
+      name: Walking sprite sheet_4
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db20c4d13c9331b48bd1b18088cda8e1
-      internalID: -1085080534
+      spriteID: d6d7739c82fb36147ac2498e9b72f73f
+      internalID: -1186786885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_5
+      name: Walking sprite sheet_5
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 64
         width: 15
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3d1f21e52a49c84187c5bda92d65b90
-      internalID: -395471266
+      spriteID: 22010fe11a4a1a240a97b171e128eda5
+      internalID: -466307347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_6
+      name: Walking sprite sheet_6
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 16
-        height: 32
+        width: 15
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32226058efd1d634dbf28ea52bef0261
-      internalID: -1959620918
+      spriteID: 54a5dfa871a961b41981ec14ee9fb3b2
+      internalID: 1435936557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_7
+      name: Walking sprite sheet_7
       rect:
         serializedVersion: 2
         x: 48
         y: 64
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03045ce4106b42e429c623ee43f121f6
-      internalID: -937204393
+      spriteID: f7686aa7eb83ff54d8850b974fe9f59e
+      internalID: -623333280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_8
+      name: Walking sprite sheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fd4074e77e613a47aeacc397f401652
-      internalID: -749139816
+      spriteID: f45590ddcd2fb5d40b9e9da94e9441e3
+      internalID: 2012640483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_9
+      name: Walking sprite sheet_9
       rect:
         serializedVersion: 2
         x: 17
         y: 32
-        width: 14
-        height: 32
+        width: 15
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1903288d21d6f794c8454b58398b9d86
-      internalID: -1849185456
+      spriteID: df42e4832210f5640a41566f23ad5359
+      internalID: 150269217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_10
+      name: Walking sprite sheet_10
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 32
         width: 15
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591ff38bd6d27004e8392a20662a2c5e
-      internalID: -206227268
+      spriteID: 0dc8cc6bd2a9cdf449e297c92ec0dcf5
+      internalID: -1619711669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_11
+      name: Walking sprite sheet_11
       rect:
         serializedVersion: 2
         x: 48
         y: 32
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4584ce7912065f3419ff8ec3f781c86b
-      internalID: 1384509199
+      spriteID: ccb39fc00ee1dd34b970952ac2326728
+      internalID: 1579084167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_12
+      name: Walking sprite sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -363,19 +363,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf46b40f64443c240b404d0055f1e62e
-      internalID: -2091724860
+      spriteID: eae823bcd0d63554185674cdf17a051f
+      internalID: -12898919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_13
+      name: Walking sprite sheet_13
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 0
-        width: 16
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -384,19 +384,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95ebb9991accd0040811d42385568262
-      internalID: -1990491492
+      spriteID: 5b8ce9d784095214dbdfd549644ea620
+      internalID: 1590323966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_14
+      name: Walking sprite sheet_14
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14da7173c2cdab94eb3010d4f64a8523
-      internalID: -524290344
+      spriteID: 969a08e51bd58e44ea256fbdc5259698
+      internalID: 2017218862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_15
+      name: Walking sprite sheet_15
       rect:
         serializedVersion: 2
         x: 48
@@ -426,8 +426,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de57d68542bf58c45a07ad47acf94f87
-      internalID: -1509207242
+      spriteID: c9599b245492c2d4db8b5e96e281a83c
+      internalID: 1374434726
       vertices: []
       indices: 
       edges: []
@@ -443,22 +443,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Esther Sprite Sheet Idle_0: -118175969
-      Esther Sprite Sheet Idle_1: 2024149388
-      Esther Sprite Sheet Idle_10: -206227268
-      Esther Sprite Sheet Idle_11: 1384509199
-      Esther Sprite Sheet Idle_12: -2091724860
-      Esther Sprite Sheet Idle_13: -1990491492
-      Esther Sprite Sheet Idle_14: -524290344
-      Esther Sprite Sheet Idle_15: -1509207242
-      Esther Sprite Sheet Idle_2: 1489142634
-      Esther Sprite Sheet Idle_3: -1251707204
-      Esther Sprite Sheet Idle_4: -1085080534
-      Esther Sprite Sheet Idle_5: -395471266
-      Esther Sprite Sheet Idle_6: -1959620918
-      Esther Sprite Sheet Idle_7: -937204393
-      Esther Sprite Sheet Idle_8: -749139816
-      Esther Sprite Sheet Idle_9: -1849185456
+      Walking sprite sheet_0: 701950383
+      Walking sprite sheet_1: -130396737
+      Walking sprite sheet_10: -1619711669
+      Walking sprite sheet_11: 1579084167
+      Walking sprite sheet_12: -12898919
+      Walking sprite sheet_13: 1590323966
+      Walking sprite sheet_14: 2017218862
+      Walking sprite sheet_15: 1374434726
+      Walking sprite sheet_2: -750570889
+      Walking sprite sheet_3: 135601215
+      Walking sprite sheet_4: -1186786885
+      Walking sprite sheet_5: -466307347
+      Walking sprite sheet_6: 1435936557
+      Walking sprite sheet_7: -623333280
+      Walking sprite sheet_8: 2012640483
+      Walking sprite sheet_9: 150269217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
