@@ -20,30 +20,37 @@ public class PlayerMovement : MonoBehaviour
     public Animator PA;
     public float speedani;
     public float speedani2;
+
+    float Vinput;
+    float Hinput;
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
          
     }
+    private void FixedUpdate()
+    {
+        if (canMove)
+        {
+
+
+            PA.SetBool("IdleDown", idledown);
+
+            Hinput = Input.GetAxis("Horizontal") * speed;
+            Vinput = Input.GetAxis("Vertical") * speed;
+
+
+        }
+        Rb.velocity = new Vector2(Hinput, Vinput);
+        changeanimation();
+    }
     // Update is called once per frame
     void Update()
     {
 
-        //Debug.Log(directionx);
         
-        if (canMove)
-        {
-            
-         
-            PA.SetBool("IdleDown", idledown);
-
-            transform.position += Vector3.right * Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-            transform.position += Vector3.up * Input.GetAxis("Vertical") * speed * Time.deltaTime;
-           
-           
-        }
-
-        changeanimation();
+        
+       
 
         if (Input.GetKey("left shift"))
         {
