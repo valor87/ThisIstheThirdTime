@@ -5,20 +5,27 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
+    public float t = 0;
     public Vector2 start;
     public Vector2 end;
     Vector2 ghostpos;
+    public AnimationCurve curve;
     public List<Transform> listofplacestogo;
 
     private void Start()
     {
+      
         ghostpos = start;
         transform.position = ghostpos;
     }
     // Update is called once per frame
     void Update()
     {
-         ghostpos = transform.position;
+        if (t > 1)
+        {
+            
+        }
+        ghostpos = transform.position;
         if (start != null && end != null)
         {
             if (ghostpos.x > end.x)
@@ -43,4 +50,5 @@ public class GhostMovement : MonoBehaviour
             transform.position = ghostpos;
         }
     }
+    
 }

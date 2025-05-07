@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
             speedani2 = 0;
             idleup = idlechange(0); idledown = idlechange(0); idleleft = idlechange(0); idleright = idlechange(0);
         }
-        Debug.Log(speedani);
+        
         PA.SetFloat("Directionx", speedani);
         PA.SetFloat("Directiony", speedani2);
     }
