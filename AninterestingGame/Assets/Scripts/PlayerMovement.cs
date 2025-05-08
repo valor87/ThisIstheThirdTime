@@ -38,11 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
             Hinput = Input.GetAxis("Horizontal") * speed;
             Vinput = Input.GetAxis("Vertical") * speed;
-
+            Rb.velocity = new Vector2(Hinput, Vinput);
+            changeanimation();
 
         }
-        Rb.velocity = new Vector2(Hinput, Vinput);
-        changeanimation();
+        
     }
     // Update is called once per frame
     void Update()
