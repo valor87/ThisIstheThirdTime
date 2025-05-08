@@ -31,12 +31,12 @@ public class GhostMovement : MonoBehaviour
             if (ghostpos.x > end.x)
             {
                 ghostpos.x -= 0.001f;
-                transform.localScale = new Vector2(-1, 0.81438f);
+                transform.localScale = new Vector2(1, 0.81438f);
             }
             if (ghostpos.x < end.x)
             {
                 ghostpos.x += 0.001f;
-                transform.localScale = new Vector2(1, 0.81438f);
+                transform.localScale = new Vector2(-1, 0.81438f);
             }
             if (ghostpos.y > end.y)
             {
