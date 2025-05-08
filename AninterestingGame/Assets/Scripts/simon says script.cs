@@ -16,10 +16,12 @@ public class simonsaysscript : MonoBehaviour
     public GameObject redlight;
     public GameObject yellowlight;
     public GameObject bluelight;
+    public List<Sprite> lights;
+    public List<GameObject> progressbulbs;
 
-    public Color trasparentred;
-    public Color trasparentblue;
-    public Color trasparentyellow;
+    public Color activebulb;
+    public Color inactivebulb;
+    
 
     public List<GameObject> NewCode;
     public List<GameObject> PlayersCode;
@@ -28,16 +30,28 @@ public class simonsaysscript : MonoBehaviour
     public GameObject text;
     public int howmanytimes;
 
+    int CorrectCodes;
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < progressbulbs.Count; i++)
+        {
+            progressbulbs[i].GetComponent<Image>().color = inactivebulb; // sets the progression bulbs to the amount of right answears
+        }
         StartCoroutine(PickCode()); // starts the code thats picked by random
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < CorrectCodes; i++)
+        {
+            progressbulbs[i].GetComponent<Image>().color = activebulb;
+        }
+        if (CorrectCodes == 4)
+        {
+            // win condition code goes here
+        }
         if (Lists(NewCode.Count)) // if the function list is true
         {
             text.SetActive(true); // turn on text
@@ -47,18 +61,13 @@ public class simonsaysscript : MonoBehaviour
         {
             ResetValues(); // resets all lists 
         }
-        if (redbutton.GetComponent<Button>().enabled == false)
+        if (Lists(NewCode.Count) && PlayersCode.Count == NewCode.Count) // if the code was wrong
         {
-            redbutton.GetComponent<Image>().color = trasparentred; // takes the color from the button
-            bluebutton.GetComponent<Image>().color = trasparentblue; // takes the color from the button
-            yellowbutton.GetComponent<Image>().color = trasparentyellow; // takes the color from the button
+            howmanytimes++;
+            CorrectCodes++;
+            ResetValues(); // resets all lists 
         }
-        else
-        {
-            redbutton.GetComponent<Image>().color = Color.red; // give the color back to the button
-            bluebutton.GetComponent<Image>().color = Color.blue; // give the color back to the button
-            yellowbutton.GetComponent<Image>().color = Color.yellow; // give the color back to the button
-        }
+
     }
 
     public void RedButtonPressed() // if red button is pressed
@@ -91,9 +100,9 @@ public class simonsaysscript : MonoBehaviour
     }
     IEnumerator PickCode()
     {
-        redlight.GetComponent<Image>().color = trasparentred; // makes the red button slightly transparent
-        yellowlight.GetComponent<Image>().color = trasparentyellow; // makes the yellow button slightly transparent
-        bluelight.GetComponent<Image>().color = trasparentblue; // makes the blue button slightly transparent
+        redlight.GetComponent<Image>().sprite = lights[1]; // makes the red button slightly transparent
+        yellowlight.GetComponent<Image>().sprite = lights[2]; // makes the yellow button slightly transparent
+        bluelight.GetComponent<Image>().sprite = lights[0]; // makes the blue button slightly transparent
 
         for (int x = 0; x < howmanytimes; x++)
         {
@@ -104,23 +113,23 @@ public class simonsaysscript : MonoBehaviour
             int _temp = Random.Range(1, 4); // picks a random number from 1 to 3
             if (_temp == 1) 
             {
-                redlight.GetComponent<Image>().color = Color.red; // show red as bright or lit
+                redlight.GetComponent<Image>().sprite = lights[4]; // show red as bright or lit
                 NewCode.Add(redlight); // add it to the made up code
             }
             else if (_temp == 2)
             {
-                bluelight.GetComponent<Image>().color = Color.blue; // show blue as bright or lit
+                bluelight.GetComponent<Image>().sprite = lights[3]; // show blue as bright or lit
                 NewCode.Add(bluelight); // add it to the made up code
             }
             else if (_temp == 3)
             {
-                yellowlight.GetComponent<Image>().color = Color.yellow; // show yellow as bright or lit
+                yellowlight.GetComponent<Image>().sprite = lights[5]; // show yellow as bright or lit
                 NewCode.Add(yellowlight); // add it to the made up code
             }
             yield return new WaitForSeconds(1); // stop the corutine for one second
-            redlight.GetComponent<Image>().color = trasparentred; // reset red light
-            yellowlight.GetComponent<Image>().color = trasparentyellow; // reset yellow light
-            bluelight.GetComponent<Image>().color = trasparentblue; // reset blue light
+            redlight.GetComponent<Image>().sprite = lights[1]; // makes the red button slightly transparent
+            yellowlight.GetComponent<Image>().sprite = lights[2]; // makes the yellow button slightly transparent
+            bluelight.GetComponent<Image>().sprite = lights[0]; // makes the blue button slightly transparent
             if (x != howmanytimes) {
                 yield return new WaitForSeconds(.5f); // wait half a second
             }
