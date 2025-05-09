@@ -48,10 +48,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        
-        
-       
-
         if (Input.GetKey("left shift"))
         {
             speed = 7;
@@ -86,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
             idleup = idlechange(1);
             speedani2 = 1;
+            speedani = 0;
         }
         else if (Input.GetKey("a"))
         {
@@ -97,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         {
             idledown = idlechange(1);
             speedani2 = -1;
+
         }
         else
         {
