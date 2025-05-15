@@ -44,10 +44,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey("left shift"))
         {
             speed = 7;
+            PA.speed = 2;
         }
         else
         {
-           speed = 5;
+            PA.speed = 1;
+            speed = 5;
         }
 
     }
