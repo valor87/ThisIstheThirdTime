@@ -19,7 +19,7 @@ public class Neeble : MonoBehaviour
 
     public void ButtonPressed ()
     {
-        NeedleDoTricksOnIt(-90);
+        NeedleDoTricksOnIt(-20);
     }
 
     void NeedleDoTricksOnIt (float zrotation)
@@ -32,10 +32,14 @@ public class Neeble : MonoBehaviour
     {
         Vector3 rotation = transform.eulerAngles;
         Vector3 newRotation = _temp;
-        while (transform.eulerAngles != newRotation)
+        while (rotation.z < 350)
         {
+            Debug.Log(rotation);
+          
+            rotation = transform.eulerAngles;
             transform.eulerAngles += Vector3.back;
             yield return new WaitForSeconds(0.25f);
+            yield return null;
         }
     }
 }
