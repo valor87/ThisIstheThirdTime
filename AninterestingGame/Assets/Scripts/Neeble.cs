@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Neeble : MonoBehaviour
 {
+    public bool ison1 = true;
+    bool ison2 = true;
+    bool ison3 = true;
     Vector3 needleTransform;
     // Start is called before the first frame update
     void Start()
@@ -17,29 +20,68 @@ public class Neeble : MonoBehaviour
         
     }
 
-    public void ButtonPressed ()
+    public void ButtonPressed()
     {
-        NeedleDoTricksOnIt(-20);
+        StartCoroutine(Yabadaba(90, ison1));
+        if (ison1) {
+            ison1 = false;
+        }
+        else
+        {
+            ison1 = true;
+        }
     }
-
-    void NeedleDoTricksOnIt (float zrotation)
+    public void ButtonPressed2()
     {
-        needleTransform = new Vector3(0, 0, zrotation);
-        StartCoroutine(Yabadaba(needleTransform));
+        StartCoroutine(Yabadaba(90, ison2));
+        if (ison2)
+        {
+            ison2 = false;
+        }
+        else
+        {
+            ison2 = true;
+        }
     }
-
-    IEnumerator Yabadaba (Vector3 _temp)
+    public void ButtonPressed3()
+    {
+        StartCoroutine(Yabadaba(90, ison3));
+        if (ison3)
+        {
+            ison3 = false;
+        }
+        else
+        {
+            ison3 = true;
+        }
+    }
+    IEnumerator Yabadaba (float degrees, bool isonTRUE)
     {
         Vector3 rotation = transform.eulerAngles;
-        Vector3 newRotation = _temp;
-        while (rotation.z < 350)
+        
+        if (isonTRUE)
         {
-            Debug.Log(rotation);
-          
-            rotation = transform.eulerAngles;
-            transform.eulerAngles += Vector3.back;
-            yield return new WaitForSeconds(0.25f);
-            yield return null;
+            int temp = 0;
+            while (temp != degrees)
+            {
+                temp++;
+                rotation = transform.eulerAngles;
+                transform.eulerAngles += Vector3.back;
+                yield return new WaitForSeconds(0.02f);
+                isonTRUE = false;
+            }
+        }
+        else
+        {
+            int temp = 0;
+            while (temp != degrees)
+            {
+                temp++;
+                rotation = transform.eulerAngles;
+                transform.eulerAngles -= Vector3.back;
+                yield return new WaitForSeconds(0.02f);
+                isonTRUE = true;
+            }
         }
     }
 }
