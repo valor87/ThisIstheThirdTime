@@ -8,15 +8,17 @@ public class Neeble : MonoBehaviour
     bool ison2 = true;
     bool ison3 = true;
     Vector3 needleTransform;
+    Vector3 tempvector;
     // Update is called once per frame
     void Update()
     {
-        
+
+        transform.eulerAngles = needleTransform - tempvector;
     }
     public void SliderValuechange(float turn)
     {
-        needleTransform = transform.eulerAngles;
-        transform.eulerAngles = needleTransform - new Vector3(0,0, turn);
+        
+        tempvector = new Vector3(0,0, turn);
     }
    
     IEnumerator Yabadaba (float degrees, bool isonTRUE)
@@ -30,7 +32,7 @@ public class Neeble : MonoBehaviour
             {
                 temp++;
                 rotation = transform.eulerAngles;
-                transform.eulerAngles += Vector3.back;
+                needleTransform += Vector3.back;
                 yield return new WaitForSeconds(0.02f);
                 isonTRUE = false;
             }
@@ -42,7 +44,7 @@ public class Neeble : MonoBehaviour
             {
                 temp++;
                 rotation = transform.eulerAngles;
-                transform.eulerAngles -= Vector3.back;
+                needleTransform -= Vector3.back;
                 yield return new WaitForSeconds(0.02f);
                 isonTRUE = true;
             }
