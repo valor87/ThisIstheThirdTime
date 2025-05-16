@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Neeble : MonoBehaviour
 {
     bool ison1 = true;
     bool ison2 = true;
     bool ison3 = true;
+    public GameObject endpos;
     Vector3 needleTransform;
     Vector3 tempvector;
     // Update is called once per frame
     void Update()
     {
-
+        
+        if (transform.eulerAngles == new Vector3(0,0,260))
+        {
+            Debug.Log(transform.eulerAngles);
+        }
         transform.eulerAngles = needleTransform - tempvector;
     }
     public void SliderValuechange(float turn)
