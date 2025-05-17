@@ -8,57 +8,66 @@ public class Neeble : MonoBehaviour
     bool ison1 = true;
     bool ison2 = true;
     bool ison3 = true;
+    public bool ButtonisOn;
+    public float turnValue;
     public GameObject endpos;
     Vector3 needleTransform;
     Vector3 tempvector;
     // Update is called once per frame
     void Update()
     {
-        
-        if (transform.eulerAngles == new Vector3(0,0,260))
+       
+            if (transform.eulerAngles == new Vector3(0, 0, 260))
+            {
+               // code on finish goes here
+            }
+        if (ButtonisOn)
         {
-            Debug.Log(transform.eulerAngles);
+            transform.eulerAngles = needleTransform - tempvector;
         }
-        transform.eulerAngles = needleTransform - tempvector;
-    }
+        }
     public void SliderValuechange(float turn)
     {
         
-        tempvector = new Vector3(0,0, turn);
+        tempvector = new Vector3(0,0, turn); // take the slider input and turns it into a rotate vector
     }
    
     IEnumerator Yabadaba (float degrees, bool isonTRUE)
     {
         Vector3 rotation = transform.eulerAngles;
         
-        if (isonTRUE)
+        if (isonTRUE) // runs if the button is on
         {
-            int temp = 0;
+            int temp = 0; // set the degrees to zero
             while (temp != degrees)
             {
-                temp++;
+                temp++; // temp increases
                 rotation = transform.eulerAngles;
-                needleTransform += Vector3.back;
-                yield return new WaitForSeconds(0.02f);
-                isonTRUE = false;
+                needleTransform += Vector3.back; // gives the movement to the object
+                yield return new WaitForSeconds(0.02f); // stop the corutine
+                isonTRUE = false; // the button is on now
             }
         }
         else
         {
-            int temp = 0;
+            int temp = 0; // set the degrees to zero
             while (temp != degrees)
             {
-                temp++;
-                rotation = transform.eulerAngles;
-                needleTransform -= Vector3.back;
-                yield return new WaitForSeconds(0.02f);
-                isonTRUE = true;
+                temp++; // temp increases
+                rotation = transform.eulerAngles;  
+                needleTransform -= Vector3.back; // gives the movement to the object
+                yield return new WaitForSeconds(0.02f); // stop the corutine
+                isonTRUE = true; // the button is on now
             }
         }
     }
+    public void stopthedial()
+    {
+        ButtonisOn = false; // stops the dial from taking input
+    }
     public void ButtonPressed()
     {
-        StartCoroutine(Yabadaba(90, ison1));
+        StartCoroutine(Yabadaba(turnValue, ison1)); // starts the cortoutine
         if (ison1)
         {
             ison1 = false;
@@ -70,7 +79,7 @@ public class Neeble : MonoBehaviour
     }
     public void ButtonPressed2()
     {
-        StartCoroutine(Yabadaba(90, ison2));
+        StartCoroutine(Yabadaba(turnValue, ison2)); // starts the cortoutine
         if (ison2)
         {
             ison2 = false;
@@ -82,7 +91,7 @@ public class Neeble : MonoBehaviour
     }
     public void ButtonPressed3()
     {
-        StartCoroutine(Yabadaba(90, ison3));
+        StartCoroutine(Yabadaba(turnValue, ison3)); // starts the cortoutine
         if (ison3)
         {
             ison3 = false;
