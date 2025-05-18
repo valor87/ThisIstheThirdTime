@@ -41,7 +41,7 @@ public class Neeble : MonoBehaviour
             Debug.Log("you win");
         }
 
-        else if (transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial && seconddialGO != null)
+        else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial )
         {
             // win again
             Debug.Log("you win x2");
@@ -54,7 +54,7 @@ public class Neeble : MonoBehaviour
         }
         if (seconddialGO != null && ButonTwoIsOn)
         {
-            Debug.Log("ima bout to blow");
+            
             seconddialGO.transform.eulerAngles = needleTransform2 - tempvector;
 
         }
@@ -147,5 +147,16 @@ public class Neeble : MonoBehaviour
         {
             ison3 = true;
         }
+    }
+
+    public void GameStateReset()
+    {
+        StopAllCoroutines();
+         ison1 = true;
+         ison2 = true;
+         ison3 = true;
+
+         needleTransform = new Vector3(0, 0, 0);
+         needleTransform2 = new Vector3(0,0,0);
     }
 }
