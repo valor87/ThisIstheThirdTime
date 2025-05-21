@@ -17,7 +17,7 @@ public class ItemScriptXXViewingText : MonoBehaviour
     public float textSpeed = 0.03f;
     bool showtext = true;
     bool continueText;
-
+    public bool TP;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +25,9 @@ public class ItemScriptXXViewingText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public void ShowText()
     {
-        if (GetComponent<SpriteRenderer>().bounds.Contains(MainPlayer.transform.position) && Input.GetKeyDown("space") && showtext) 
+        if (GetComponent<SpriteRenderer>().bounds.Contains(MainPlayer.transform.position) && showtext) 
         {
             showtext = false; // stops the text from being activated more then once
             dialaugeCanvus.SetActive(true); // turns on the canvus
@@ -35,7 +35,7 @@ public class ItemScriptXXViewingText : MonoBehaviour
             
             StartCoroutine(slowtext()); // starts the coroutine
         }
- 
+    
     }
 
     IEnumerator slowtext()
@@ -73,6 +73,10 @@ public class ItemScriptXXViewingText : MonoBehaviour
 
         showtext = true; // the text can be displayed again 
         MainPlayer.GetComponent<PlayerMovement>().canMove = true; // Stop the player from moving
+        if (TP)
+        {
+            GetComponent<CrackedWallScript>().Teleport();
+        }
     }
 
 }
