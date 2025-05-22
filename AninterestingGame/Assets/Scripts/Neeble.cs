@@ -18,6 +18,9 @@ public class Neeble : MonoBehaviour
     public float turnValuebuttonthree;
 
     public GameObject seconddialGO;
+    public GameObject slider;
+    public List<Sprite> listofbuttons;
+    public List<GameObject> buttons;
 
     public Vector3 endrotation;
     public Vector3 endrotation2dial;
@@ -25,6 +28,7 @@ public class Neeble : MonoBehaviour
     Vector3 needleTransform;
     Vector3 needleTransform2;
     Vector3 tempvector;
+
     // Update is called once per frame
     void Update()
     {
@@ -41,7 +45,7 @@ public class Neeble : MonoBehaviour
             Debug.Log("you win");
         }
 
-        else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial )
+        else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
         {
             // win again
             Debug.Log("you win x2");
@@ -50,11 +54,11 @@ public class Neeble : MonoBehaviour
         if (ButtonisOn)
         {
             transform.eulerAngles = needleTransform - tempvector;
-           
+
         }
         if (seconddialGO != null && ButonTwoIsOn)
         {
-            
+
             seconddialGO.transform.eulerAngles = needleTransform2 - tempvector;
 
         }
@@ -82,7 +86,7 @@ public class Neeble : MonoBehaviour
                     needleTransform2 += Vector3.back;
                 }
 
-              
+
                 yield return new WaitForSeconds(0.02f); // stop the corutine
                 isonTRUE = false; // the button is on now
             }
@@ -107,10 +111,12 @@ public class Neeble : MonoBehaviour
     public void stopthedial()
     {
         ButtonisOn = false; // stops the dial from taking input
+        buttons[3].GetComponent<Image>().sprite = listofbuttons[3];
     }
     public void stoptheSeconddial()
     {
         ButonTwoIsOn = false; // stops the dial from taking input
+        buttons[4].GetComponent<Image>().sprite = listofbuttons[3];
     }
     public void ButtonPressed()
     {
@@ -118,10 +124,12 @@ public class Neeble : MonoBehaviour
         if (ison1)
         {
             ison1 = false;
+            buttons[0].GetComponent<Image>().sprite = listofbuttons[1];
         }
         else
         {
             ison1 = true;
+            buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
         }
     }
     public void ButtonPressed2()
@@ -130,10 +138,12 @@ public class Neeble : MonoBehaviour
         if (ison2)
         {
             ison2 = false;
+            buttons[1].GetComponent<Image>().sprite = listofbuttons[1];
         }
         else
         {
             ison2 = true;
+            buttons[1].GetComponent<Image>().sprite = listofbuttons[0];
         }
     }
     public void ButtonPressed3()
@@ -142,21 +152,34 @@ public class Neeble : MonoBehaviour
         if (ison3)
         {
             ison3 = false;
+            buttons[2].GetComponent<Image>().sprite = listofbuttons[1];
         }
         else
         {
             ison3 = true;
+            buttons[2].GetComponent<Image>().sprite = listofbuttons[0];
         }
     }
 
     public void GameStateReset()
     {
         StopAllCoroutines();
-         ison1 = true;
-         ison2 = true;
-         ison3 = true;
+        ison1 = true;
+        ison2 = true;
+        ison3 = true;
 
-         needleTransform = new Vector3(0, 0, 0);
-         needleTransform2 = new Vector3(0,0,0);
+        ButtonisOn = true; // starts the dial from taking input
+        buttons[3].GetComponent<Image>().sprite = listofbuttons[2];
+
+        ButonTwoIsOn = true; // staarts the dial from taking input
+        buttons[4].GetComponent<Image>().sprite = listofbuttons[2];
+
+        buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
+        buttons[1].GetComponent<Image>().sprite = listofbuttons[0];
+        buttons[2].GetComponent<Image>().sprite = listofbuttons[0];
+
+        slider.GetComponent<Slider>().value = 0;
+        needleTransform = new Vector3(0, 0, 0);
+        needleTransform2 = new Vector3(0, 0, 0);
     }
 }
