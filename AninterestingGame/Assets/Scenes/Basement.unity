@@ -1319,7 +1319,7 @@ RectTransform:
   m_Father: {fileID: 890694799}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1413,6 +1413,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8165799983669029711, guid: 5d3b93affbd452e45a6c26f88a449515, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 662934967}
     - target: {fileID: 8165799983669029711, guid: 5d3b93affbd452e45a6c26f88a449515, type: 3}
       propertyPath: dialaugeCanvus
       value: 
@@ -7212,6 +7216,10 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: -0.0009663254
       objectReference: {fileID: 0}
+    - target: {fileID: 7824482230922175695, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11507,7 +11515,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -15759,7 +15767,7 @@ RectTransform:
   m_Father: {fileID: 1335588905}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -1.9246}
   m_SizeDelta: {x: 20, y: 33.5444}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16578,7 +16586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2027734773
 MonoBehaviour:
   m_ObjectHideFlags: 0
