@@ -9,7 +9,7 @@ public class Neeble : MonoBehaviour
     bool ison2 = true;
     bool ison3 = true;
     bool isrunning = false;
-
+    public bool puzzledone = false;
     public bool seconddial;
     bool ButtonisOn = true;
     public bool ButonTwoIsOn = true;
@@ -18,8 +18,12 @@ public class Neeble : MonoBehaviour
     public float turnValuebuttontwo;
     public float turnValuebuttonthree;
 
+    public GameObject canvus;
     public GameObject seconddialGO;
     public GameObject slider;
+    public GameObject GreenLight;
+    public Sprite LitGreenLight;
+
     public List<Sprite> listofbuttons;
     public List<GameObject> buttons;
 
@@ -71,7 +75,12 @@ public class Neeble : MonoBehaviour
 
         tempvector = new Vector3(0, 0, turn); // take the slider input and turns it into a rotate vector
     }
-
+    IEnumerator closepuzzle()
+    {
+        yield return new WaitForSeconds(2);
+        canvus.SetActive(false);
+        puzzledone = true;
+    }
     IEnumerator Yabadaba(float degrees, bool isonTRUE)
     {
         isrunning = true;
@@ -112,9 +121,10 @@ public class Neeble : MonoBehaviour
             }
 
         }
-        Debug.Log("Its working");
+
         isrunning = false;
         yield return new WaitForSeconds(2);
+
         checkifcorrect();
     }
     public void stopthedial()
@@ -186,11 +196,13 @@ public class Neeble : MonoBehaviour
         ison2 = true;
         ison3 = true;
         isrunning = false;
-        if (buttons[3] != null) {
+        if (buttons[3] != null)
+        {
             ButtonisOn = true; // starts the dial from taking input
             buttons[3].GetComponent<Image>().sprite = listofbuttons[2];
         }
-        if (buttons[4] != null) {
+        if (buttons[4] != null)
+        {
             ButonTwoIsOn = true; // staarts the dial from taking input
             buttons[4].GetComponent<Image>().sprite = listofbuttons[2];
         }
@@ -208,11 +220,16 @@ public class Neeble : MonoBehaviour
         {
             // code on finish goes here
             Debug.Log("you win");
+            GreenLight.GetComponent<Image>().sprite = LitGreenLight;
+            StartCoroutine(closepuzzle());
         }
         else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
         {
             // win again
             Debug.Log("you win x2");
+            GreenLight.GetComponent<Image>().sprite = LitGreenLight;
+            StartCoroutine(closepuzzle());
+
         }
     }
 }
