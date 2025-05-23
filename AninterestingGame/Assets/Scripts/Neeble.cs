@@ -8,6 +8,7 @@ public class Neeble : MonoBehaviour
     bool ison1 = true;
     bool ison2 = true;
     bool ison3 = true;
+    bool isrunning = false;
 
     public bool seconddial;
     bool ButtonisOn = true;
@@ -36,15 +37,15 @@ public class Neeble : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(transform.eulerAngles);
-           
-            Debug.Log(seconddialGO.transform.eulerAngles);
+
+            //Debug.Log(seconddialGO.transform.eulerAngles);
         }
 
-        if (transform.eulerAngles == endrotation && !seconddial)
-        {
-            // code on finish goes here
-            Debug.Log("you win");
-        }
+        //if (transform.eulerAngles == endrotation && !seconddial)
+        //{
+        //    // code on finish goes here
+        //    Debug.Log("you win");
+        //}
 
         else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
         {
@@ -66,12 +67,14 @@ public class Neeble : MonoBehaviour
     }
     public void SliderValuechange(float turn)
     {
+        checkifcorrect();
 
         tempvector = new Vector3(0, 0, turn); // take the slider input and turns it into a rotate vector
     }
 
     IEnumerator Yabadaba(float degrees, bool isonTRUE)
     {
+        isrunning = true;
         Vector3 rotation = transform.eulerAngles;
 
         if (isonTRUE) // runs if the button is on
@@ -107,7 +110,12 @@ public class Neeble : MonoBehaviour
                 yield return new WaitForSeconds(0.02f); // stop the corutine
                 isonTRUE = true; // the button is on now
             }
+
         }
+        Debug.Log("Its working");
+        isrunning = false;
+        yield return new WaitForSeconds(2);
+        checkifcorrect();
     }
     public void stopthedial()
     {
@@ -121,44 +129,53 @@ public class Neeble : MonoBehaviour
     }
     public void ButtonPressed()
     {
-        StartCoroutine(Yabadaba(turnValuebuttonone, ison1)); // starts the cortoutine
-        if (ison1)
+        if (!isrunning)
         {
-            ison1 = false;
-            buttons[0].GetComponent<Image>().sprite = listofbuttons[1];
-        }
-        else
-        {
-            ison1 = true;
-            buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
+            StartCoroutine(Yabadaba(turnValuebuttonone, ison1)); // starts the cortoutine
+            if (ison1)
+            {
+                ison1 = false;
+                buttons[0].GetComponent<Image>().sprite = listofbuttons[1];
+            }
+            else
+            {
+                ison1 = true;
+                buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
+            }
         }
     }
     public void ButtonPressed2()
     {
-        StartCoroutine(Yabadaba(turnValuebuttontwo, ison2)); // starts the cortoutine
-        if (ison2)
+        if (!isrunning)
         {
-            ison2 = false;
-            buttons[1].GetComponent<Image>().sprite = listofbuttons[1];
-        }
-        else
-        {
-            ison2 = true;
-            buttons[1].GetComponent<Image>().sprite = listofbuttons[0];
+            StartCoroutine(Yabadaba(turnValuebuttontwo, ison2)); // starts the cortoutine
+            if (ison2)
+            {
+                ison2 = false;
+                buttons[1].GetComponent<Image>().sprite = listofbuttons[1];
+            }
+            else
+            {
+                ison2 = true;
+                buttons[1].GetComponent<Image>().sprite = listofbuttons[0];
+            }
         }
     }
     public void ButtonPressed3()
     {
-        StartCoroutine(Yabadaba(turnValuebuttonthree, ison3)); // starts the cortoutine
-        if (ison3)
+        if (!isrunning)
         {
-            ison3 = false;
-            buttons[2].GetComponent<Image>().sprite = listofbuttons[1];
-        }
-        else
-        {
-            ison3 = true;
-            buttons[2].GetComponent<Image>().sprite = listofbuttons[0];
+            StartCoroutine(Yabadaba(turnValuebuttonthree, ison3)); // starts the cortoutine
+            if (ison3)
+            {
+                ison3 = false;
+                buttons[2].GetComponent<Image>().sprite = listofbuttons[1];
+            }
+            else
+            {
+                ison3 = true;
+                buttons[2].GetComponent<Image>().sprite = listofbuttons[0];
+            }
         }
     }
 
@@ -168,13 +185,15 @@ public class Neeble : MonoBehaviour
         ison1 = true;
         ison2 = true;
         ison3 = true;
-
-        ButtonisOn = true; // starts the dial from taking input
-        buttons[3].GetComponent<Image>().sprite = listofbuttons[2];
-
-        ButonTwoIsOn = true; // staarts the dial from taking input
-        buttons[4].GetComponent<Image>().sprite = listofbuttons[2];
-
+        isrunning = false;
+        if (buttons[3] != null) {
+            ButtonisOn = true; // starts the dial from taking input
+            buttons[3].GetComponent<Image>().sprite = listofbuttons[2];
+        }
+        if (buttons[4] != null) {
+            ButonTwoIsOn = true; // staarts the dial from taking input
+            buttons[4].GetComponent<Image>().sprite = listofbuttons[2];
+        }
         buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
         buttons[1].GetComponent<Image>().sprite = listofbuttons[0];
         buttons[2].GetComponent<Image>().sprite = listofbuttons[0];
@@ -182,5 +201,18 @@ public class Neeble : MonoBehaviour
         slider.GetComponent<Slider>().value = 0;
         needleTransform = new Vector3(0, 0, 0);
         needleTransform2 = new Vector3(0, 0, 0);
+    }
+    void checkifcorrect()
+    {
+        if (transform.eulerAngles == endrotation && !seconddial)
+        {
+            // code on finish goes here
+            Debug.Log("you win");
+        }
+        else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
+        {
+            // win again
+            Debug.Log("you win x2");
+        }
     }
 }
