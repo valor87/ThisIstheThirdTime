@@ -36,6 +36,7 @@ public class Neeble : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(transform.eulerAngles);
+           
             Debug.Log(seconddialGO.transform.eulerAngles);
         }
 
