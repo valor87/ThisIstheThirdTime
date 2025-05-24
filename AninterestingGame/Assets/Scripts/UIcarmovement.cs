@@ -12,6 +12,7 @@ public class UIcarmovement : MonoBehaviour
     float tempy;
     float tempx;
 
+    public List<GameObject> Road;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,11 @@ public class UIcarmovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xspeed += tempx;
-        yspeed += tempy;
-    transform.position += new Vector3(xspeed, yspeed, 0);
         
+                xspeed += tempx;
+                yspeed += tempy;
+                transform.position += new Vector3(xspeed, yspeed, 0);
+          
     }
 
     public void MoveRight()

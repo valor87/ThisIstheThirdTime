@@ -15,9 +15,7 @@ public class GhostSpotLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<SpriteRenderer>().bounds.Contains(Player.transform.position))
-        {
-            GetComponent<SpriteRenderer>().color = Color.blue;
-        }
+       
     }
+
 }
