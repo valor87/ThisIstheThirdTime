@@ -10384,6 +10384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esther
       objectReference: {fileID: 0}
+    - target: {fileID: 79096000321055668, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 796328632846717646, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99
