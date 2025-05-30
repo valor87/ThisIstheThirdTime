@@ -15,15 +15,17 @@ public class GameObjectCarCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKey("space"))
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       // Debug.Log(mousepos);
+        if (Input.GetMouseButton(1) && GetComponent<SpriteRenderer>().bounds.Contains(mousepos))
         {
-            //GetComponent<SplineAnimate>().Pause();
-           // GetComponent<SplineAnimate>().MaxSpeed = -5;
+            GetComponent<SplineAnimate>().enabled = false;
+            transform.position = mousepos;
 
         }
         else
         {
+            GetComponent<SplineAnimate>().enabled = true;
             GetComponent<SplineAnimate>().Play();
            // GetComponent<SplineAnimate>().MaxSpeed = 5f;
         }

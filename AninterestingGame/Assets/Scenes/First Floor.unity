@@ -1004,7 +1004,7 @@ MonoBehaviour:
   m_Target: {fileID: 1090089161}
   m_PlayOnAwake: 1
   m_LoopMode: 1
-  m_Method: 0
+  m_Method: 1
   m_Duration: 6.030557
   m_MaxSpeed: 1.9999999
   m_EasingMode: 0
@@ -1072,8 +1072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700680673}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.84097624, y: -0.54107225, z: 0.00000008940697, w: -0.000000029802322}
-  m_LocalPosition: {x: -2.5950763, y: 1.5516733, z: 0}
+  m_LocalRotation: {x: -0.6257265, y: 0.7800426, z: 0.00000014156103, w: 0.00000009685755}
+  m_LocalPosition: {x: 3.2791708, y: 1.5516733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
