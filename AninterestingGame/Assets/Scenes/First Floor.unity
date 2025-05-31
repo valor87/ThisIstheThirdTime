@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_PlayOnAwake: 1
   m_LoopMode: 1
   m_Method: 1
-  m_Duration: 6.030557
+  m_Duration: 6.0305576
   m_MaxSpeed: 1.9999999
   m_EasingMode: 0
   m_AlignmentMode: 1
@@ -1072,8 +1072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700680673}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6257265, y: 0.7800426, z: 0.00000014156103, w: 0.00000009685755}
-  m_LocalPosition: {x: 3.2791708, y: 1.5516733, z: 0}
+  m_LocalRotation: {x: -0.8409762, y: 0.54107225, z: -0.000000067055225, w: 0.00000012665987}
+  m_LocalPosition: {x: -2.5950763, y: 1.5516733, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1662,41 +1662,23 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 5.874247
-        y: 0
-        z: 0
-      TangentIn:
         x: 0
         y: 0
-        z: -0.3406156
-      TangentOut:
-        x: 0
-        y: 0
-        z: 0.3406156
-      Rotation:
-        value:
-          x: 0.077157475
-          y: 0.7028846
-          z: -0.7028845
-          w: -0.07715752
-    - Position:
-        x: 5.283128
-        y: -3.8053298
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -0.9488764
+        z: -0.41002238
       TangentOut:
         x: 0
         y: 0
-        z: 0.91544914
+        z: 0.41002238
       Rotation:
         value:
-          x: -0.2988669
-          y: -0.64084214
-          z: 0.64084214
-          w: 0.29886678
+          x: -0.14995186
+          y: 0.6910242
+          z: -0.6910242
+          w: 0.14995207
     - Position:
         x: 1.6994677
         y: -3.73144
@@ -1711,36 +1693,54 @@ MonoBehaviour:
         z: 1.8118098
       Rotation:
         value:
-          x: -0.5100934
-          y: -0.48969892
-          z: 0.48969737
-          w: 0.51009434
+          x: -0.4896973
+          y: 0.51009434
+          z: -0.5100934
+          w: 0.48969886
     - Position:
-        x: 0
-        y: 0
+        x: 5.283128
+        y: -3.8053298
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -0.41002238
+        z: -0.91544914
       TangentOut:
         x: 0
         y: 0
-        z: 0.41002238
+        z: 0.9488764
       Rotation:
         value:
-          x: -0.6910242
-          y: -0.14995207
-          z: 0.14995186
-          w: 0.6910242
+          x: 0.64084214
+          y: -0.29886678
+          z: 0.29886684
+          w: -0.64084214
+    - Position:
+        x: 5.874247
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.3406156
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.3406156
+      Rotation:
+        value:
+          x: -0.70288455
+          y: 0.07715755
+          z: -0.077157505
+          w: 0.7028847
     m_MetaData:
-    - Mode: 2
-      Tension: 0.5
     - Mode: 0
       Tension: 0.5
     - Mode: 2
       Tension: 0.5
     - Mode: 0
+      Tension: 0.5
+    - Mode: 2
       Tension: 0.5
     m_Closed: 0
     m_IntData:
