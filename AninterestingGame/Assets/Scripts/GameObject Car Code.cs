@@ -4,28 +4,28 @@ using UnityEngine;
 using UnityEngine.Splines;
 using System;
 using UnityEngine.Analytics;
+using UnityEditor;
 public class GameObjectCarCode : MonoBehaviour
 {
-    float temptime;
+    public bool transfer;
     public GameObject SPLINELOOP;
+    public GameObject Arrow;
+    public GameObject triggercircle;
     // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
+   
     // Update is called once per frame
     void Update()
     {
         Vector2 pos = transform.position;
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        if (Input.GetMouseButton(1) && GetComponent<SpriteRenderer>().bounds.Contains(mousepos))
+        if (Input.GetMouseButton(1) && Arrow.GetComponent<SpriteRenderer>().bounds.Contains(mousepos) && transfer)
         {
-            GetComponent<SplineAnimate>().ElapsedTime += 1f;
+            GetComponent<SplineAnimate>().ElapsedTime = 0;
             GetComponent<SplineAnimate>().enabled = true;
             GetComponent<SplineAnimate>().Loop = SplineAnimate.LoopMode.Loop;
             GetComponent<SplineAnimate>().Container = SPLINELOOP.GetComponent<SplineContainer>();
+            transfer = false;
         }
         else
         {
@@ -33,11 +33,10 @@ public class GameObjectCarCode : MonoBehaviour
             GetComponent<SplineAnimate>().Play();
         }
 
-        Debug.Log(Mathf.Round(pos.x * 10f)*0.1f);
-
-        if (new Vector2(Mathf.Round(pos.x * 10f) * 0.1f, Mathf.Round(pos.y * 10f) * 0.1f) == new Vector2(5.5f, -4.5f))
+        if (triggercircle.GetComponent<SpriteRenderer>().bounds.Contains(transform.position))
         {
-            GetComponent<SplineAnimate>().Pause();
+                transfer = true;
         }
     }
+   
 }
