@@ -41,12 +41,12 @@ public class CarManager : MonoBehaviour
     {
         for (int x = 0; x < howmanycars; x++)
         {
-            Debug.Log("working");
             GameObject tempCar = Instantiate(PrefabCar);
             tempCar.GetComponent<GameObjectCarCode>().Arrow = Arrow;
+            tempCar.GetComponent<GameObjectCarCode>().CarManagaer = this.gameObject;
             tempCar.GetComponent<GameObjectCarCode>().triggercircle = triggercircle;
             tempCar.GetComponent<SplineAnimate>().Container = spline.GetComponent<SplineContainer>();
-            tempCar.GetComponent<SplineAnimate>().MaxSpeed = Random.RandomRange(3,8);
+            tempCar.GetComponent<SplineAnimate>().MaxSpeed = 3;
             tempCar.GetComponent<GameObjectCarCode>().SPLINELOOP = splineloop;
             CarsonTrack.Add(tempCar);
             yield return new WaitForSeconds(1f);

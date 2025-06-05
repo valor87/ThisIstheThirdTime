@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d98699170f4c146a5ca2ccc6901e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howmanycars: 5
+  howmanycars: 2
   spline: {fileID: 1090089160}
   splineloop: {fileID: 1076767194}
   PrefabCar: {fileID: 7785799995581842895, guid: 354fb871e3f02e0418c75d27c9e26600, type: 3}

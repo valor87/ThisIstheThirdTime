@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 219318482493463532}
   - component: {fileID: 401584125987757774}
   - component: {fileID: 5969864320310213236}
-  - component: {fileID: 8655366486110483655}
+  - component: {fileID: 6229861706054549276}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -126,7 +126,11 @@ MonoBehaviour:
   SPLINELOOP: {fileID: 0}
   Arrow: {fileID: 0}
   triggercircle: {fileID: 0}
---- !u!61 &8655366486110483655
+  CarManagaer: {fileID: 0}
+  Cars: []
+  Destinations:
+  - {x: 3.96, y: 2.88}
+--- !u!61 &6229861706054549276
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
