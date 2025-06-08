@@ -128,8 +128,7 @@ MonoBehaviour:
   triggercircle: {fileID: 0}
   CarManagaer: {fileID: 0}
   Cars: []
-  Destinations:
-  - {x: 3.96, y: 2.88}
+  Destinations: []
 --- !u!61 &6229861706054549276
 BoxCollider2D:
   m_ObjectHideFlags: 0

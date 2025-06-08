@@ -5,6 +5,7 @@ using UnityEngine.Splines;
 using System;
 using UnityEngine.Analytics;
 using UnityEditor;
+using UnityEditor.Splines;
 public class GameObjectCarCode : MonoBehaviour
 {
     public bool transfer;
@@ -14,35 +15,40 @@ public class GameObjectCarCode : MonoBehaviour
     public GameObject CarManagaer;
 
     public List<GameObject> Cars;
-    public List<Vector2> Destinations;
+    public List<GameObject> Destinations;
 
     Vector2 pos;
     float cartime;
-    
+
+    SplineAnimate splineani;
+
+    private void Start()
+    {
+        splineani = GetComponent<SplineAnimate>();
+    }
     // Update is called once per frame
     void Update()
     {
         
-        cartime = GetComponent<SplineAnimate>().ElapsedTime;
         Cars = CarManagaer.GetComponent<CarManager>().CarsonTrack;
          pos = transform.position;
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         TimetoStopAreas();
-        
+      
         if (Input.GetMouseButton(1) && GetComponent<SpriteRenderer>().bounds.Contains(mousepos))
         {
-            GetComponent<SplineAnimate>().Play();
-            cartime = 0;
-            GetComponent<SplineAnimate>().enabled = true;
-            GetComponent<SplineAnimate>().Loop = SplineAnimate.LoopMode.Loop;
-            GetComponent<SplineAnimate>().Container = SPLINELOOP.GetComponent<SplineContainer>();
-            transfer = false;
+            splineani.Play();
+            Debug.Log("click");
+            splineani.enabled = true;
+            //splineani.Loop = SplineAnimate.LoopMode.Loop;
+           // splineani.Container = SPLINELOOP.GetComponent<SplineContainer>();
+           // transfer = false;
         }
         else
         {
             GetComponent<SplineAnimate>().enabled = true;
-           // GetComponent<SplineAnimate>().Play();
+            //GetComponent<SplineAnimate>().Play();
         }
         if (triggercircle.GetComponent<SpriteRenderer>().bounds.Contains(transform.position))
         {
@@ -53,17 +59,10 @@ public class GameObjectCarCode : MonoBehaviour
 
     public void TimetoStopAreas()
     {
-        pos.x = Mathf.Round((pos.x * 10)) * 0.1f;
-        pos.y = Mathf.Round((pos.y * 10)) * 0.1f;
-        if (Input.GetKey("space"))
-        {
-            Debug.Log(pos);
-        }
         for (int cime = 0; cime<Destinations.Count; cime++) {
-            if (pos == Destinations[cime])
+            if (Destinations[cime].GetComponent<SpriteRenderer>().bounds.Contains(pos))
             {
-                Debug.Log(cartime);
-                GetComponent<SplineAnimate>().Pause();
+                splineani.Pause();
             }
         }
     }
@@ -72,10 +71,6 @@ public class GameObjectCarCode : MonoBehaviour
         for (int x = 0; x < Cars.Count; x++)
         {
 
-            if (Cars[x] != this.gameObject)
-            {
-                
-            }
         }
     }
 }
