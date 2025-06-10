@@ -27,14 +27,6 @@ public class CarManager : MonoBehaviour
     {
         Arrow.SetActive(true);
 
-        for (int x = 0; x < CarsonTrack.Count; x++)
-        {
-            if (CarsonTrack[x].GetComponent<GameObjectCarCode>().transfer)
-            {
-                Arrow.SetActive(true);
-            }
-
-        }
 
     }
     IEnumerator spawncars()
