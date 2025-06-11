@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEditor.Splines;
 using UnityEngine;
 using UnityEngine.Splines;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class CarManager : MonoBehaviour
 {
@@ -17,18 +18,36 @@ public class CarManager : MonoBehaviour
     public List<GameObject> CarsonTrack;
     public List<GameObject> destination;
 
+    SpriteRenderer sp;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(spawncars());
+        sp = Arrow.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Arrow.SetActive(true);
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        for (int co = 0; co < CarsonTrack.Count; co++)
+        {
+            if (CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer)
+            {
+                Arrow.SetActive(true);
 
+                if (Input.GetMouseButtonDown(1) && sp.bounds.Contains(mousepos) && CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer == true)
+                {
+                    changecarstrack(CarsonTrack[co]);
+                }
+            }
+          
+           
+        }
+       
     }
+
+
     IEnumerator spawncars()
     {
         for (int x = 0; x < howmanycars; x++) // loops for how many cars you want
@@ -39,13 +58,12 @@ public class CarManager : MonoBehaviour
             {
                 tempCar.GetComponent<GameObjectCarCode>().Destinations.Add(destination[des]); // give the car prefab its list
             }
-          
-            tempCar.GetComponent<GameObjectCarCode>().Arrow = Arrow; // give the car prefab its arrow
+
             tempCar.GetComponent<GameObjectCarCode>().CarManagaer = this.gameObject; // give the car prefab its car manager
             tempCar.GetComponent<GameObjectCarCode>().triggercircle = triggercircle; // give the car prefab its trigger circle
             tempCar.GetComponent<SplineAnimate>().Container = spline.GetComponent<SplineContainer>(); // give the car prefab its spline container
             tempCar.GetComponent<SplineAnimate>().MaxSpeed = 3; // sets its max speed
-            tempCar.GetComponent<GameObjectCarCode>().SPLINELOOP = splineloop; // set its to loop the spline
+            tempCar.GetComponent<GameObjectCarCode>().SPLINELOOP = spline; // set its to loop the spline
 
             switch (x)
             {
@@ -63,4 +81,11 @@ public class CarManager : MonoBehaviour
         }
     }
 
+    void changecarstrack(GameObject t)
+    {
+        t.GetComponent<SplineAnimate>().Container = splineloop.GetComponent<SplineContainer>();
+        t.GetComponent<SplineAnimate>().Play();
+        t.GetComponent<SplineAnimate>().ElapsedTime = 0;
+        t.GetComponent<GameObjectCarCode>().transfer = false;
+    }
 }

@@ -6,32 +6,34 @@ using UnityEngine.Splines;
 public class GameObjectCarCode : MonoBehaviour
 {
     public GameObject SPLINELOOP;
-    public GameObject Arrow;
     public GameObject triggercircle;
     public GameObject CarManagaer;
 
-    public List<GameObject> Cars;
     public List<GameObject> Destinations;
 
+    public bool transfer;
     bool ismoveing = true;
     Vector2 pos;
 
     SplineAnimate splineani;
-
+    SpriteRenderer sp;
     private void Start()
     {
         // making a varible for the spline animator
         splineani = GetComponent<SplineAnimate>();
+         sp = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
     void Update()
     {
-        
-        Cars = CarManagaer.GetComponent<CarManager>().CarsonTrack; // giving the list a varible its in update because it needs to add new items to the list
+       
         pos = transform.position; // giving this object trasfrom a varible
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
-
-        if (Input.GetMouseButtonDown(1) && GetComponent<SpriteRenderer>().bounds.Contains(mousepos)) // if hovering over the car and clicking mouse button
+        if (sp.bounds.Contains(triggercircle.transform.position))
+        {
+            transfer = true;
+        }
+        if (Input.GetMouseButtonDown(1) && sp.bounds.Contains(mousepos)) // if hovering over the car and clicking mouse button
         {
             splineani.Play(); // play animation
             ismoveing = true; // the box is moving
