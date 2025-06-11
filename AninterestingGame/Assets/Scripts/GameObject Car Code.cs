@@ -50,7 +50,9 @@ public class GameObjectCarCode : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "WayPoint") { // using tags because it catgorizes objects in a simple way
-            splineani.Pause(); // pause animation
+            if (splineani != null) {
+                splineani.Pause(); // pause animation
+            }
             ismoveing = false; // is no longer moving
         }
         else if(ismoveing == true) // the moving object in the collision
