@@ -21,12 +21,12 @@ public class GameObjectCarCode : MonoBehaviour
     {
         // making a varible for the spline animator
         splineani = GetComponent<SplineAnimate>();
-         sp = GetComponent<SpriteRenderer>();
+        sp = GetComponent<SpriteRenderer>();
     }
     // Update is called once per frame
     void Update()
     {
-       
+
         pos = transform.position; // giving this object trasfrom a varible
         Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // get mouse position
         if (sp.bounds.Contains(triggercircle.transform.position))
@@ -38,7 +38,7 @@ public class GameObjectCarCode : MonoBehaviour
             splineani.Play(); // play animation
             ismoveing = true; // the box is moving
         }
-        
+
     }
     /*
     this code runs when this object hits another collider
@@ -49,17 +49,20 @@ public class GameObjectCarCode : MonoBehaviour
      */
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "WayPoint") { // using tags because it catgorizes objects in a simple way
-            if (splineani != null) {
-                splineani.Pause(); // pause animation
-            }
-            ismoveing = false; // is no longer moving
-        }
-        else if(ismoveing == true) // the moving object in the collision
+        if (splineani != null)
         {
-            splineani.ElapsedTime -= 0.1f; // move the object backwards
-            splineani.Pause(); // stop its animation
-            ismoveing = false; // its no longer moving
+            if (collision.gameObject.tag == "WayPoint")
+            { // using tags because it catgorizes objects in a simple way
+
+                splineani.Pause(); // pause animation
+                ismoveing = false; // is no longer moving
+            }
+            else if (ismoveing == true) // the moving object in the collision
+            {
+                splineani.ElapsedTime -= 0.1f; // move the object backwards
+                splineani.Pause(); // stop its animation
+                ismoveing = false; // its no longer moving
+            }
         }
     }
 

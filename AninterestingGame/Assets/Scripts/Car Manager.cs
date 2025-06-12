@@ -21,6 +21,8 @@ public class CarManager : MonoBehaviour
 
     SpriteRenderer sp;
     bool spawning = false;
+    bool mousepress;
+    Vector2 mousepos;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,38 +33,38 @@ public class CarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        for (int co = 0; co < CarsonTrack.Count; co++)
+        mousepress = Input.GetMouseButtonDown(0);
+        mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // mouse position on screen
+
+        for (int co = 0; co < CarsonTrack.Count; co++) // loops throught the game object list
         {
             if (CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer)
             {
                 Arrow.SetActive(true);
 
-                if (Input.GetMouseButtonDown(1) && sp.bounds.Contains(mousepos) && CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer == true)
+                if (mousepress && sp.bounds.Contains(mousepos) && CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer == true) // if the car is at the end of the track
                 {
-                    changecarstrack(CarsonTrack[co]);
+                    changecarstrack(CarsonTrack[co]); // change the track
                 }
             }
-            if (Input.GetMouseButtonDown(1) && triggerCircleEnd.GetComponent<SpriteRenderer>().bounds.Contains(CarsonTrack[co].transform.position) && CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer == false && spawning == false)
+            if (CarReadyForDespawn(CarsonTrack[co])) // if the car is at the end of the second track
             {
-                KilltheCar(CarsonTrack[co]);
-                spawning = true;
-                StartCoroutine(spawncars(1));
-                Debug.Log("Working");
+                KilltheCar(CarsonTrack[co]); // destroy the car
+                spawning = true; // spawns one car at a time
+                StartCoroutine(spawncars(1)); // spawn the car
             }
 
 
         }
-       
-    }
 
+    }
 
     IEnumerator spawncars(int howmanycars)
     {
         for (int x = 0; x < howmanycars; x++) // loops for how many cars you want
         {
             GameObject tempCar = Instantiate(PrefabCar); // makes a game object varible for later use
-            tempCar.transform.position = new Vector2(-8.2f, 8.3f);
+
             for (int des = 0; des < destination.Count; des++) // adds the stoping circles to stop the car at predetermined spots
             {
                 tempCar.GetComponent<GameObjectCarCode>().Destinations.Add(destination[des]); // give the car prefab its list
@@ -81,6 +83,7 @@ public class CarManager : MonoBehaviour
                     break;
                 default:
                     tempCar.GetComponent<SplineAnimate>().Pause(); // else dont play the animation
+                    tempCar.transform.position = destination[x].transform.position;
                     break;
             }
 
@@ -104,4 +107,15 @@ public class CarManager : MonoBehaviour
         Destroy(Bigballs);
         CarsonTrack.Remove(Bigballs);
     }
+
+    private bool CarReadyForDespawn(GameObject co)
+    {
+        if (mousepress && triggerCircleEnd.GetComponent<SpriteRenderer>().bounds.Contains(co.transform.position) && co.GetComponent<SpriteRenderer>().bounds.Contains(mousepos)
+            && co.GetComponent<GameObjectCarCode>().transfer == false && spawning == false)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
