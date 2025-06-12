@@ -62,7 +62,7 @@ public class CarManager : MonoBehaviour
         for (int x = 0; x < howmanycars; x++) // loops for how many cars you want
         {
             GameObject tempCar = Instantiate(PrefabCar); // makes a game object varible for later use
-
+            tempCar.transform.position = new Vector2(-8.2f, 8.3f);
             for (int des = 0; des < destination.Count; des++) // adds the stoping circles to stop the car at predetermined spots
             {
                 tempCar.GetComponent<GameObjectCarCode>().Destinations.Add(destination[des]); // give the car prefab its list

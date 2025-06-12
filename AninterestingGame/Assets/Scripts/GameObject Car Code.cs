@@ -12,7 +12,7 @@ public class GameObjectCarCode : MonoBehaviour
     public List<GameObject> Destinations;
 
     public bool transfer;
-    bool ismoveing = true;
+    public bool ismoveing = true;
     Vector2 pos;
 
     SplineAnimate splineani;
