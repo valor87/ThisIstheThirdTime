@@ -17,12 +17,14 @@ public class CarManager : MonoBehaviour
     public GameObject triggercircle;
     public List<GameObject> CarsonTrack;
     public List<GameObject> destination;
+    public GameObject triggerCircleEnd;
 
     SpriteRenderer sp;
+    bool spawning = false;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawncars());
+        StartCoroutine(spawncars(howmanycars));
         sp = Arrow.GetComponent<SpriteRenderer>();
     }
 
@@ -41,14 +43,21 @@ public class CarManager : MonoBehaviour
                     changecarstrack(CarsonTrack[co]);
                 }
             }
-          
-           
+            if (Input.GetMouseButtonDown(1) && triggerCircleEnd.GetComponent<SpriteRenderer>().bounds.Contains(CarsonTrack[co].transform.position) && CarsonTrack[co].GetComponent<GameObjectCarCode>().transfer == false && spawning == false)
+            {
+                KilltheCar(CarsonTrack[co]);
+                spawning = true;
+                StartCoroutine(spawncars(1));
+                Debug.Log("Working");
+            }
+
+
         }
        
     }
 
 
-    IEnumerator spawncars()
+    IEnumerator spawncars(int howmanycars)
     {
         for (int x = 0; x < howmanycars; x++) // loops for how many cars you want
         {
@@ -77,6 +86,7 @@ public class CarManager : MonoBehaviour
 
             CarsonTrack.Add(tempCar); // add the car to the list
 
+            spawning = false;
             yield return new WaitForSeconds(1f); // stop for one second before spawing another car
         }
     }
@@ -87,5 +97,11 @@ public class CarManager : MonoBehaviour
         t.GetComponent<SplineAnimate>().Play();
         t.GetComponent<SplineAnimate>().ElapsedTime = 0;
         t.GetComponent<GameObjectCarCode>().transfer = false;
+    }
+
+    void KilltheCar(GameObject Bigballs)
+    {
+        Destroy(Bigballs);
+        CarsonTrack.Remove(Bigballs);
     }
 }
