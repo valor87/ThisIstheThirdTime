@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class showonscreentext : MonoBehaviour
 {
+    public GameObject Esther;
+    public GameObject triggerArea;
     GameObject Image;
     GameObject conIcon;
     GameObject Textobject;
     TextMeshProUGUI text;
+    SpriteRenderer sp;
     public TextAsset textasset;
     public string[] dialauge;
     public float textSpeed = 0.05f;
     bool continueText;
+    bool texton;
+
     private void Start()
     {
+        sp = triggerArea.GetComponent<SpriteRenderer>();
         Transform imagetr = transform.GetChild(0);
         Image = imagetr.gameObject;
         Transform texttr = transform.GetChild(1);
@@ -27,19 +34,18 @@ public class showonscreentext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position))
         {
-            turnOnUi(); // turns on the canvus
             dialauge = (textasset.text.Split('\n')); // splits the entire text doc by when ever the enter button is pressed
-
             StartCoroutine(slowtext()); // starts the coroutine
         }
     }
     IEnumerator slowtext()
     {
-
-        for (int i = 0; i < dialauge.Count(); i++)
+        
+        texton = true;
+        turnOnUi(); // turns on the canvus
+        for (int i =0; i < dialauge.Count(); i++)
         {
             string currenttext = dialauge[i]; // sets the line of the txt file
 
@@ -67,18 +73,21 @@ public class showonscreentext : MonoBehaviour
             text.text = string.Empty; // at the end of all the lines it sets the text box to empty
         }
         turnOffUi();// turns off the canvus
+        texton = false;
         yield return null;
 
     }
 
     private void turnOnUi()
     {
+        Esther.GetComponent<PlayerMovement>().canMove = false;
         Image.SetActive(true);
         Textobject.SetActive(true);
         conIcon.SetActive(true);
     }
     private void turnOffUi()
     {
+        Esther.GetComponent<PlayerMovement>().canMove = true;
         Image.SetActive(false);
         Textobject.SetActive(false);
         conIcon.SetActive(false);

@@ -646,6 +646,10 @@ PrefabInstance:
       propertyPath: text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6813538824684801018, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: Esther
+      value: 
+      objectReference: {fileID: 1990486629}
     - target: {fileID: 7276285767348408147, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: m_IsActive
       value: 0
