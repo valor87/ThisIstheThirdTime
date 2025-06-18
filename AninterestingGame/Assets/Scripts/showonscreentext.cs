@@ -52,7 +52,6 @@ public class showonscreentext : MonoBehaviour
             for (int c = 0; c < currenttext.Length; c++)
             {
                 text.text += currenttext[c]; // breaks the line into numbered letters so they can be displayed one by one
-                Debug.Log("Working");
                 yield return new WaitForSeconds(textSpeed); // waits based on the text speed
             }
 
