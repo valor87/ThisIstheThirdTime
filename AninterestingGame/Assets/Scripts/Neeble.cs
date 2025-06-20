@@ -41,15 +41,7 @@ public class Neeble : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(transform.eulerAngles);
-
-            //Debug.Log(seconddialGO.transform.eulerAngles);
         }
-
-        //if (transform.eulerAngles == endrotation && !seconddial)
-        //{
-        //    // code on finish goes here
-        //    Debug.Log("you win");
-        //}
 
         else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
         {
@@ -64,9 +56,7 @@ public class Neeble : MonoBehaviour
         }
         if (seconddialGO != null && ButonTwoIsOn)
         {
-
             seconddialGO.transform.eulerAngles = needleTransform2 - tempvector;
-
         }
     }
     public void SliderValuechange(float turn)
@@ -98,7 +88,6 @@ public class Neeble : MonoBehaviour
                 {
                     needleTransform2 += Vector3.back;
                 }
-
 
                 yield return new WaitForSeconds(0.02f); // stop the corutine
                 isonTRUE = false; // the button is on now
