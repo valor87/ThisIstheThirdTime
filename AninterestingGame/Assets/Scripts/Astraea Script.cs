@@ -60,6 +60,9 @@ public class AstraeaScript : MonoBehaviour
             case 8:
                 temp = names[7];
                 break;
+            default:
+                temp = names[0];
+                break;
         }
         
         an.SetBool(temp, true);
