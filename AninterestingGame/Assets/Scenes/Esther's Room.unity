@@ -713,6 +713,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7816072426518300119, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a11a1f3b6b1112f4195058e56ff88f1b, type: 2}
+    - target: {fileID: 7816072426518300119, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: Esther
       value: 
@@ -4269,6 +4277,75 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ce1385edda2994583e91cc7ce83d1c, type: 3}
+--- !u!1001 &4274406198706392005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.468234
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.468234
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.468234
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 656216596470823425, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3524967664773631057, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
+      propertyPath: m_Name
+      value: Astraea
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 66530ae9589ff32418d3dd886e213c32, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4289,3 +4366,4 @@ SceneRoots:
   - {fileID: 564956749}
   - {fileID: 1934846870}
   - {fileID: 1196311556}
+  - {fileID: 4274406198706392005}
