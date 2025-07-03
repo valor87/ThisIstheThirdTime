@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.1635, y: -0.8353, z: 0}
-  m_LocalScale: {x: 2.6404006, y: 2.5557668, z: 2.024375}
+  m_LocalScale: {x: 2.5425594, y: 2.4610617, z: 1.9493611}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,13 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c2e030be29c9a4cb0107f45e890e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleright: 0
-  idleleft: 0
-  idledown: 0
-  idleup: 0
   speed: 5
   canMove: 1
   PA: {fileID: 7450805935534660154}
+  speedani: 0
+  speedani2: 0
+  Vinput: 0
+  Hinput: 0
 --- !u!95 &7450805935534660154
 Animator:
   serializedVersion: 5
