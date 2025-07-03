@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.XR;
+
 using UnityEngine;
-using UnityEngine.UIElements;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,8 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public bool canMove = true;
     Rigidbody2D Rb;
-    Vector2 tempx;
-    Vector2 tempy;
+
     public Animator PA;
     public float speedani;
     public float speedani2;

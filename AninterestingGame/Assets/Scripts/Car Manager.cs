@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.Splines;
 using UnityEngine;
 using UnityEngine.Splines;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class CarManager : MonoBehaviour
 {
 
     public int howmanycars;
+    public GameObject Destination;
     public GameObject spline;
     public GameObject splineloop;
     public GameObject PrefabCar;
@@ -61,6 +59,7 @@ public class CarManager : MonoBehaviour
 
     IEnumerator spawncars(int howmanycars)
     {
+        Destination.SetActive(false);
         for (int x = 0; x < howmanycars; x++) // loops for how many cars you want
         {
             GameObject tempCar = Instantiate(PrefabCar); // makes a game object varible for later use
@@ -76,22 +75,14 @@ public class CarManager : MonoBehaviour
             tempCar.GetComponent<SplineAnimate>().MaxSpeed = 3; // sets its max speed
             tempCar.GetComponent<GameObjectCarCode>().SPLINELOOP = spline; // set its to loop the spline
 
-            switch (x)
-            {
-                case 0:
-                    tempCar.GetComponent<SplineAnimate>().Play(); // if its the first object then start with the animation playing
-                    break;
-                default:
-                    tempCar.GetComponent<SplineAnimate>().Pause(); // else dont play the animation
-                    tempCar.transform.position = destination[x].transform.position;
-                    break;
-            }
+            tempCar.GetComponent<SplineAnimate>().Play(); // if its the first object then start with the animation playing
 
             CarsonTrack.Add(tempCar); // add the car to the list
 
             spawning = false;
-            yield return new WaitForSeconds(1f); // stop for one second before spawing another car
+            yield return new WaitForSeconds(.5f); // stop for one second before spawing another car
         }
+        Destination.SetActive(true);
     }
 
     void changecarstrack(GameObject t)
