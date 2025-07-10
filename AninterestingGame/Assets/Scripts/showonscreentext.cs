@@ -18,7 +18,7 @@ public class showonscreentext : MonoBehaviour
     public string[] dialauge;
     public float textSpeed = 0.05f;
     bool continueText;
-    bool texton;
+    public bool texton;
 
     private void Start()
     {
@@ -36,20 +36,24 @@ public class showonscreentext : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position))
         {
-            Esther.GetComponent<PlayerMovement>().PA.SetFloat("Directionx", 0); Esther.GetComponent<PlayerMovement>().PA.SetFloat("Directiony", 0); ;
-            dialauge = (textasset.text.Split('\n')); // splits the entire text doc by when ever the enter button is pressed
-            StartCoroutine(slowtext()); // starts the coroutine
+            startText();
         }
+    }
+    public void startText()
+    {
+        Esther.GetComponent<PlayerMovement>().PA.SetFloat("Directionx", 0); Esther.GetComponent<PlayerMovement>().PA.SetFloat("Directiony", 0); ;
+        dialauge = (textasset.text.Split('\n')); // splits the entire text doc by when ever the enter button is pressed
+        StartCoroutine(slowtext()); // starts the coroutine
     }
     IEnumerator slowtext()
     {
-        
+
         texton = true;
         turnOnUi(); // turns on the canvus
         stopEsther(); // stops the player from moving
-        for (int i =0; i < dialauge.Count(); i++)
+        for (int i = 0; i < dialauge.Count(); i++)
         {
-            
+
             string currenttext = dialauge[i]; // sets the line of the txt file
 
             for (int c = 0; c < currenttext.Length; c++)
@@ -96,7 +100,7 @@ public class showonscreentext : MonoBehaviour
     }
     private void stopEsther()
     {
-        
-        Esther.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+
+        Esther.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }
