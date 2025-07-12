@@ -11,6 +11,7 @@ public class showonscreentext : MonoBehaviour
     public GameObject Esther;
     public GameObject triggerArea;
     public GameObject Triggerbox;
+    public GameObject ObjectToShow;
     GameObject Image;
     GameObject conIcon;
     GameObject Textobject;
@@ -28,7 +29,7 @@ public class showonscreentext : MonoBehaviour
     bool make;
     bool texthasbeenshown;
     public bool overlayon;
-
+    public bool playerchoice;
     private void Start()
     {
         sp = triggerArea.GetComponent<SpriteRenderer>();
@@ -51,23 +52,7 @@ public class showonscreentext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (texthasbeenshown && texton == false)
-        {
-            Debug.Log("text is done");
-            texthasbeenshown = false;
-            StartCoroutine(makeachoice());
-        }
-
-        if (!make)
-        {
-            if (Triggerbox.GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space")
-                &&texton == false && !overlayon)
-            {
-                texthasbeenshown = true;
-                Debug.Log("Text has been shown");
-            }
-        }
-        if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position))
+        if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position) && !overlayon)
         {
             startText();
         }
@@ -111,6 +96,49 @@ public class showonscreentext : MonoBehaviour
             }
             text.text = string.Empty; // at the end of all the lines it sets the text box to empty
         }
+        turnOffUi();// turns off the canvus
+        if (playerchoice) {
+            bool yestrue = false;
+            make = true;
+            Yestext.SetActive(true);
+            Notext.SetActive(true);
+            Image.SetActive(true);
+            Esther.GetComponent<PlayerMovement>().canMove = false;
+            while (make)
+            {
+                if (Input.GetKey("a"))
+                {
+                    Yesbox.SetActive(true);
+                    Nobox.SetActive(false);
+                    yestrue = true;
+                }
+                if (Input.GetKey("d"))
+                {
+                    Nobox.SetActive(true);
+                    Yesbox.SetActive(false);
+                    yestrue = false;
+                    
+
+                }
+                if (Input.GetKey("space") && yestrue)
+                {
+                    Yesbox.SetActive(false);
+                    make = false;
+                    Debug.Log("Yes was slected");
+                    ObjectToShow.SetActive(true);
+
+                }
+                else if (Input.GetKey("space") && !yestrue)
+                {
+                    Nobox.SetActive(false);
+                    make = false;
+                    Debug.Log("No was slected");
+                }
+                yield return null;
+            }
+        }
+        Yestext.SetActive(false);
+        Notext.SetActive(false);
         turnOffUi();// turns off the canvus
         texton = false;
         yield return null;

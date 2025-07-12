@@ -5938,7 +5938,7 @@ PrefabInstance:
     - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: textasset
       value: 
-      objectReference: {fileID: 4900000, guid: e9b9116e94bfd0143a6af4c25642e51a, type: 3}
+      objectReference: {fileID: 4900000, guid: 3dfe1aab4ece313498930a43f4c48597, type: 3}
     - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: Triggerbox
       value: 
@@ -5946,7 +5946,15 @@ PrefabInstance:
     - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: triggerArea
       value: 
-      objectReference: {fileID: 745235949}
+      objectReference: {fileID: 488866035}
+    - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: ObjectToShow
+      value: 
+      objectReference: {fileID: 698811436}
+    - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: playerchoice
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8843698941998286067, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9513,7 +9521,7 @@ MonoBehaviour:
   inactivebulb: {r: 0.5411765, g: 0.27450982, b: 0.20784314, a: 1}
   NewCode: []
   PlayersCode: []
-  confermationtext: {fileID: 519919617}
+  showonscreentext: {fileID: 995702603}
   canvus: {fileID: 698811436}
   text: {fileID: 1636805785}
   howmanytimes: 3
