@@ -163,7 +163,6 @@ public class showonscreentext : MonoBehaviour
             }
             if (Input.GetKey("space") && yestrue)
             {
-               
                 Yesbox.SetActive(false);
                 make = false;
             }

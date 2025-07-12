@@ -30,7 +30,7 @@ public class InGameTextThenShowGameObject : MonoBehaviour
         {
             Debug.Log("text is done");
             texthasbeenshown = false;
-            StartCoroutine(makeachoice());
+       
         }
 
         if (!make)
