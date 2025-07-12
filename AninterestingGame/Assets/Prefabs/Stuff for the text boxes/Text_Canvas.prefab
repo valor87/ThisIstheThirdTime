@@ -825,7 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Esther: {fileID: 0}
   triggerArea: {fileID: 0}
-  textasset: {fileID: 0}
+  textasset: {fileID: 4900000, guid: e9b9116e94bfd0143a6af4c25642e51a, type: 3}
   dialauge: []
   textSpeed: 0.05
   texton: 0

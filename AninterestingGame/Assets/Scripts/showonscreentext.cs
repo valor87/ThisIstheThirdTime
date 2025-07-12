@@ -4,14 +4,20 @@ using System.Diagnostics.Contracts;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class showonscreentext : MonoBehaviour
 {
     public GameObject Esther;
     public GameObject triggerArea;
+    public GameObject Triggerbox;
     GameObject Image;
     GameObject conIcon;
     GameObject Textobject;
+    GameObject Yestext;
+    GameObject Notext;
+    GameObject Yesbox;
+    GameObject Nobox;
     TextMeshProUGUI text;
     SpriteRenderer sp;
     public TextAsset textasset;
@@ -19,6 +25,9 @@ public class showonscreentext : MonoBehaviour
     public float textSpeed = 0.05f;
     bool continueText;
     public bool texton;
+    bool make;
+    bool texthasbeenshown;
+    public bool overlayon;
 
     private void Start()
     {
@@ -30,10 +39,34 @@ public class showonscreentext : MonoBehaviour
         text = Textobject.GetComponent<TextMeshProUGUI>();
         Transform contr = transform.GetChild(2);
         conIcon = contr.gameObject;
+        Transform noboxtr = transform.GetChild(3);
+        Nobox = noboxtr.gameObject;
+        Transform yesboxtr = transform.GetChild(4);
+        Yesbox = yesboxtr.gameObject;
+        Transform yestexttr = transform.GetChild(5);
+        Yestext = yestexttr.gameObject;
+        Transform notexttr = transform.GetChild(6);
+        Notext = notexttr.gameObject;
     }
     // Update is called once per frame
     void Update()
     {
+        if (texthasbeenshown && texton == false)
+        {
+            Debug.Log("text is done");
+            texthasbeenshown = false;
+            StartCoroutine(makeachoice());
+        }
+
+        if (!make)
+        {
+            if (Triggerbox.GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space")
+                &&texton == false && !overlayon)
+            {
+                texthasbeenshown = true;
+                Debug.Log("Text has been shown");
+            }
+        }
         if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position))
         {
             startText();
@@ -102,5 +135,49 @@ public class showonscreentext : MonoBehaviour
     {
 
         Esther.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+    }
+
+    IEnumerator makeachoice()
+    {
+        //TextCanvus.GetComponent<showonscreentext>().textasset = null;
+        bool yestrue = false;
+        make = true;
+        Yestext.SetActive(true);
+        Notext.SetActive(true);
+        Image.SetActive(true);
+        Esther.GetComponent<PlayerMovement>().canMove = false;
+        while (make)
+        {
+            if (Input.GetKey("a"))
+            {
+                Yesbox.SetActive(true);
+                Nobox.SetActive(false);
+                yestrue = true;
+
+            }
+            if (Input.GetKey("d"))
+            {
+                Nobox.SetActive(true);
+                Yesbox.SetActive(false);
+                yestrue = false;
+            }
+            if (Input.GetKey("space") && yestrue)
+            {
+               
+                Yesbox.SetActive(false);
+                make = false;
+            }
+            else if (Input.GetKey("space") && !yestrue)
+            {
+                Nobox.SetActive(false);
+                make = false;
+            }
+            yield return null;
+        }
+        Yestext.SetActive(false);
+        Notext.SetActive(false);
+        Image.SetActive(false);
+        Esther.GetComponent<PlayerMovement>().canMove = true;
+
     }
 }
