@@ -23,6 +23,7 @@ public class simonsaysscript : MonoBehaviour
     public List<GameObject> NewCode;
     public List<GameObject> PlayersCode;
 
+    public GameObject confermationtext;
     public GameObject canvus;
     public GameObject text;
     public int howmanytimes;
@@ -31,6 +32,7 @@ public class simonsaysscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        confermationtext.GetComponent<InGameTextThenShowGameObject>().overlayon = true;
         for (int i = 0; i < progressbulbs.Count; i++)
         {
             progressbulbs[i].GetComponent<Image>().color = inactivebulb; // sets the progression bulbs to the amount of right answears
@@ -48,6 +50,7 @@ public class simonsaysscript : MonoBehaviour
         if (CorrectCodes == 4)
         {
             // win condition code goes here
+            confermationtext.GetComponent<InGameTextThenShowGameObject>().overlayon = false;
         }
         if (Lists(NewCode.Count)) // if the function list is true
         {
@@ -93,6 +96,7 @@ public class simonsaysscript : MonoBehaviour
     }
     public void ExitGame()
     {
+        confermationtext.GetComponent<InGameTextThenShowGameObject>().overlayon = false;
         canvus.SetActive(false); // turns off the canvus
     }
     IEnumerator PickCode()

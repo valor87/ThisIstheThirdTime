@@ -6227,6 +6227,8 @@ MonoBehaviour:
   NoBox: {fileID: 244917686}
   Yestext: {fileID: 1713815957}
   Notext: {fileID: 1747272112}
+  BackBox: {fileID: 973145537}
+  overlayon: 0
 --- !u!1 &543293175
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,6 +7629,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906040415}
   m_CullTransparentMesh: 1
+--- !u!1 &973145537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2756551960955769410, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+  m_PrefabInstance: {fileID: 324351515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &995702603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9064267455950705183, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
@@ -9418,6 +9425,7 @@ MonoBehaviour:
   inactivebulb: {r: 0.5411765, g: 0.27450982, b: 0.20784314, a: 1}
   NewCode: []
   PlayersCode: []
+  confermationtext: {fileID: 519919617}
   canvus: {fileID: 698811436}
   text: {fileID: 1636805785}
   howmanytimes: 3
