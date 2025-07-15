@@ -26,6 +26,7 @@ public class simonsaysscript : MonoBehaviour
     public GameObject showonscreentext;
     public GameObject canvus;
     public GameObject text;
+    public GameObject Closet;
     public int howmanytimes;
 
     int CorrectCodes;
@@ -51,6 +52,8 @@ public class simonsaysscript : MonoBehaviour
         {
             // win condition code goes here
             showonscreentext.GetComponent<showonscreentext>().overlayon = false;
+            canvus.SetActive(false);
+            Closet.SetActive(true);
         }
         if (Lists(NewCode.Count)) // if the function list is true
         {
