@@ -12,6 +12,7 @@ public class showonscreentext : MonoBehaviour
     public GameObject triggerArea;
     public GameObject Triggerbox;
     public GameObject ObjectToShow;
+    public GameObject extraText;
     GameObject Image;
     GameObject conIcon;
     GameObject Textobject;
@@ -52,8 +53,7 @@ public class showonscreentext : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space") && texton == false && sp.bounds.Contains(Esther.transform.position) && !overlayon)
-        {
+        if (!texton) {
             startText();
         }
     }
@@ -101,6 +101,7 @@ public class showonscreentext : MonoBehaviour
             bool yestrue = false;
             make = true;
             Yestext.SetActive(true);
+            extraText.SetActive(true);
             Notext.SetActive(true);
             Image.SetActive(true);
             Esther.GetComponent<PlayerMovement>().canMove = false;
@@ -139,6 +140,8 @@ public class showonscreentext : MonoBehaviour
         }
         Yestext.SetActive(false);
         Notext.SetActive(false);
+        extraText.SetActive(false);
+        this.gameObject.SetActive(false);
         turnOffUi();// turns off the canvus
         texton = false;
         yield return null;
@@ -173,6 +176,7 @@ public class showonscreentext : MonoBehaviour
         Yestext.SetActive(true);
         Notext.SetActive(true);
         Image.SetActive(true);
+        extraText.SetActive(true);
         Esther.GetComponent<PlayerMovement>().canMove = false;
         while (make)
         {
@@ -201,6 +205,7 @@ public class showonscreentext : MonoBehaviour
             }
             yield return null;
         }
+        extraText.SetActive(false);
         Yestext.SetActive(false);
         Notext.SetActive(false);
         Image.SetActive(false);
