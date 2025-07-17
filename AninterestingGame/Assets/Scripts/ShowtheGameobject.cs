@@ -14,6 +14,7 @@ public class ShowtheGameobject : MonoBehaviour
             if (text != null)
             {
                 showObject.GetComponent<showonscreentext>().textasset = text;
+                showObject.GetComponent<showonscreentext>().playerchoice = true;
 
             }
             showObject.SetActive(true); // show the object
