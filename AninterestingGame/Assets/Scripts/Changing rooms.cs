@@ -9,8 +9,8 @@ public class Changingrooms : MonoBehaviour
     public Vector2 ChangedPos;
     Vector2 EsthersPos;
     float fadeamount;
-    bool isrunning;
-
+    public bool isrunning;
+    public bool changed;
     void Start()
     {
         fadeamount = 0;
@@ -39,7 +39,7 @@ public class Changingrooms : MonoBehaviour
 
         EsthersPos = ChangedPos; // change esthers position
         Esther.transform.position = EsthersPos;
-        
+        changed = true;
         while (fadeamount > 0)
         {
             fadeamount -= 0.03f; // decrease the transparancy of the box infrount of the camera
@@ -48,5 +48,6 @@ public class Changingrooms : MonoBehaviour
         }
         Esther.GetComponent<PlayerMovement>().canMove = true; // give movement back
         isrunning = false; // set up so it can run again
+        changed = false;
     }
 }
