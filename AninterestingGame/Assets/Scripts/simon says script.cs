@@ -53,7 +53,7 @@ public class simonsaysscript : MonoBehaviour
             // win condition code goes here
             showonscreentext.GetComponent<showonscreentext>().overlayon = false;
             canvus.SetActive(false);
-            Closet.SetActive(true);
+            Closet.GetComponent<ClosetTrigger>().ClosetOpen = true;
         }
         if (Lists(NewCode.Count)) // if the function list is true
         {

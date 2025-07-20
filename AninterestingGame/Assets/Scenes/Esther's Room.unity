@@ -6415,7 +6415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Esther: {fileID: 1323688273}
   ChangeLocations: {fileID: 1610857986}
-  ClosetOpen: 1
+  ClosetOpen: 0
   DampDark: {r: 0.44313726, g: 0.44313726, b: 0.44313726, a: 1}
   color: 1
 --- !u!212 &203542617
@@ -14499,7 +14499,7 @@ MonoBehaviour:
   showonscreentext: {fileID: 995702603}
   canvus: {fileID: 698811436}
   text: {fileID: 1636805785}
-  Closet: {fileID: 1610857986}
+  Closet: {fileID: 203542615}
   howmanytimes: 3
 --- !u!1001 &2098002192
 PrefabInstance:
@@ -14847,8 +14847,8 @@ SceneRoots:
   - {fileID: 149543343}
   - {fileID: 921646567}
   - {fileID: 388855692}
-  - {fileID: 1137648483}
   - {fileID: 203542618}
+  - {fileID: 1137648483}
   - {fileID: 1097180902}
   - {fileID: 1300133618}
   - {fileID: 365934709}
