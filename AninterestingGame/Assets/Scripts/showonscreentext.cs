@@ -13,6 +13,7 @@ public class showonscreentext : MonoBehaviour
     public GameObject Triggerbox;
     public GameObject ObjectToShow;
     public GameObject extraText;
+    public Color Textcolor;
     GameObject Image;
     GameObject conIcon;
     GameObject Textobject;
@@ -20,7 +21,7 @@ public class showonscreentext : MonoBehaviour
     GameObject Notext;
     GameObject Yesbox;
     GameObject Nobox;
-    TextMeshProUGUI text;
+    public TextMeshProUGUI text;
     SpriteRenderer sp;
     public TextAsset textasset;
     public string[] dialauge;
@@ -39,6 +40,7 @@ public class showonscreentext : MonoBehaviour
         Transform texttr = transform.GetChild(1);
         Textobject = texttr.gameObject;
         text = Textobject.GetComponent<TextMeshProUGUI>();
+        text.color = Textcolor;
         Transform contr = transform.GetChild(2);
         conIcon = contr.gameObject;
         Transform noboxtr = transform.GetChild(3);
