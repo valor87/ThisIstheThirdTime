@@ -40,7 +40,6 @@ public class showonscreentext : MonoBehaviour
         Transform texttr = transform.GetChild(1);
         Textobject = texttr.gameObject;
         text = Textobject.GetComponent<TextMeshProUGUI>();
-        text.color = Textcolor;
         Transform contr = transform.GetChild(2);
         conIcon = contr.gameObject;
         Transform noboxtr = transform.GetChild(3);

@@ -14,12 +14,14 @@ public class Doorlockedscript : MonoBehaviour
     {
         if (GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space") && doorlocked)
         {
-            if (text != null)
+            
+            if (text != null && showObject != null)
             {
                 showObject.GetComponent<showonscreentext>().textasset = text;
                 showObject.GetComponent<showonscreentext>().playerchoice = false;
+                showObject.SetActive(true); // show the object
             }
-            showObject.SetActive(true); // show the object
+           
         }
         else if (GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space") && !doorlocked)
         {
