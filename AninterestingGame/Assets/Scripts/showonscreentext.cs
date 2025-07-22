@@ -12,6 +12,7 @@ public class showonscreentext : MonoBehaviour
     public GameObject triggerArea;
     public GameObject Triggerbox;
     public GameObject ObjectToShow;
+    public GameObject BlackBox;
     public GameObject extraText;
     public Color Textcolor;
     GameObject Image;
@@ -34,7 +35,9 @@ public class showonscreentext : MonoBehaviour
     public bool playerchoice;
     private void Start()
     {
-        sp = triggerArea.GetComponent<SpriteRenderer>();
+        if (triggerArea != null) {
+            sp = triggerArea.GetComponent<SpriteRenderer>();
+        }
         Transform imagetr = transform.GetChild(0);
         Image = imagetr.gameObject;
         Transform texttr = transform.GetChild(1);
@@ -162,6 +165,9 @@ public class showonscreentext : MonoBehaviour
         Image.SetActive(false);
         Textobject.SetActive(false);
         conIcon.SetActive(false);
+        if (BlackBox != null) {
+            BlackBox.SetActive(false);
+        }
     }
     private void stopEsther()
     {
