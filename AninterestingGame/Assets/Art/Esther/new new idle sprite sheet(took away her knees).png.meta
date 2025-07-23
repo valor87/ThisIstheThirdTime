@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e0a1d9e389593294e9e124798ac4b97d
+guid: 83879df2eac4eff43ba156bd4d3e9ae7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,17 +93,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_0
+      name: new new idle sprite sheet(took away her knees)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 96
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 348b3742f4fe6f645ae3e9726d0a24cb
-      internalID: -118175969
+      spriteID: 0bedeea168a09984b95d4670c3e55897
+      internalID: 1702115741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_1
+      name: new new idle sprite sheet(took away her knees)_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 96
-        width: 16
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc7870372cca53f4682ff68334e16892
-      internalID: 2024149388
+      spriteID: fb02ab24622f1e44a9b6e3e1241cb69d
+      internalID: -1187547315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_2
+      name: new new idle sprite sheet(took away her knees)_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 96
-        width: 16
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a964ca3426eeaee4386db83ad3dea9c3
-      internalID: 1489142634
+      spriteID: a1ea2afaf7096a645bc6c618b1ae4345
+      internalID: 426729815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_3
+      name: new new idle sprite sheet(took away her knees)_3
       rect:
         serializedVersion: 2
         x: 48
         y: 96
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f474b5b617946a4cbc09ce924dff370
-      internalID: -1251707204
+      spriteID: 160d7a810dc56d943891a2ae222a16d5
+      internalID: 2136229616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_4
+      name: new new idle sprite sheet(took away her knees)_4
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db20c4d13c9331b48bd1b18088cda8e1
-      internalID: -1085080534
+      spriteID: baef19c0df47c0240987fee945413a12
+      internalID: 1966838182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_5
+      name: new new idle sprite sheet(took away her knees)_5
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 64
-        width: 15
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3d1f21e52a49c84187c5bda92d65b90
-      internalID: -395471266
+      spriteID: a61941beb33e000429861b7936d43101
+      internalID: 331721544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_6
+      name: new new idle sprite sheet(took away her knees)_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 64
-        width: 16
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32226058efd1d634dbf28ea52bef0261
-      internalID: -1959620918
+      spriteID: 0bf8993050c77d1468a71b49ba90c642
+      internalID: 1173095712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_7
+      name: new new idle sprite sheet(took away her knees)_7
       rect:
         serializedVersion: 2
         x: 48
         y: 64
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03045ce4106b42e429c623ee43f121f6
-      internalID: -937204393
+      spriteID: ace50e3062f06164382d159d2278307b
+      internalID: -147904503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_8
+      name: new new idle sprite sheet(took away her knees)_8
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fd4074e77e613a47aeacc397f401652
-      internalID: -749139816
+      spriteID: e42198b5eb5da3e4ca2184f756f61cb3
+      internalID: -1960550063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_9
+      name: new new idle sprite sheet(took away her knees)_9
       rect:
         serializedVersion: 2
         x: 17
         y: 32
         width: 14
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1903288d21d6f794c8454b58398b9d86
-      internalID: -1849185456
+      spriteID: b97ea200a0b26664aa1078316f7f1aa4
+      internalID: -1556107447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_10
+      name: new new idle sprite sheet(took away her knees)_10
       rect:
         serializedVersion: 2
         x: 33
         y: 32
-        width: 15
-        height: 32
+        width: 14
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 591ff38bd6d27004e8392a20662a2c5e
-      internalID: -206227268
+      spriteID: 3bd6e5afcc3b2054f991b20b2f65fb5f
+      internalID: 1243979634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_11
+      name: new new idle sprite sheet(took away her knees)_11
       rect:
         serializedVersion: 2
         x: 48
         y: 32
         width: 16
-        height: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4584ce7912065f3419ff8ec3f781c86b
-      internalID: 1384509199
+      spriteID: d60a748ae34bc084abe013f37860f454
+      internalID: 1216877370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_12
+      name: new new idle sprite sheet(took away her knees)_12
       rect:
         serializedVersion: 2
         x: 0
@@ -363,19 +376,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf46b40f64443c240b404d0055f1e62e
-      internalID: -2091724860
+      spriteID: a5578f46322230e4a857d73a4404153c
+      internalID: 2088765519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_13
+      name: new new idle sprite sheet(took away her knees)_13
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 0
-        width: 16
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -384,19 +397,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95ebb9991accd0040811d42385568262
-      internalID: -1990491492
+      spriteID: f49950faf8dd4d340869634f591f821f
+      internalID: 1972505849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_14
+      name: new new idle sprite sheet(took away her knees)_14
       rect:
         serializedVersion: 2
-        x: 32
+        x: 33
         y: 0
-        width: 16
+        width: 14
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -405,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14da7173c2cdab94eb3010d4f64a8523
-      internalID: -524290344
+      spriteID: 547ab3b016a8a9544a4e5d56584956f9
+      internalID: -412165647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Esther Sprite Sheet Idle_15
+      name: new new idle sprite sheet(took away her knees)_15
       rect:
         serializedVersion: 2
         x: 48
@@ -426,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de57d68542bf58c45a07ad47acf94f87
-      internalID: -1509207242
+      spriteID: f3b583ed81b768e41a923731f5f7a20b
+      internalID: -1453902231
       vertices: []
       indices: 
       edges: []
@@ -443,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Esther Sprite Sheet Idle_0: -118175969
-      Esther Sprite Sheet Idle_1: 2024149388
-      Esther Sprite Sheet Idle_10: -206227268
-      Esther Sprite Sheet Idle_11: 1384509199
-      Esther Sprite Sheet Idle_12: -2091724860
-      Esther Sprite Sheet Idle_13: -1990491492
-      Esther Sprite Sheet Idle_14: -524290344
-      Esther Sprite Sheet Idle_15: -1509207242
-      Esther Sprite Sheet Idle_2: 1489142634
-      Esther Sprite Sheet Idle_3: -1251707204
-      Esther Sprite Sheet Idle_4: -1085080534
-      Esther Sprite Sheet Idle_5: -395471266
-      Esther Sprite Sheet Idle_6: -1959620918
-      Esther Sprite Sheet Idle_7: -937204393
-      Esther Sprite Sheet Idle_8: -749139816
-      Esther Sprite Sheet Idle_9: -1849185456
+      new new idle sprite sheet(took away her knees)_0: 1702115741
+      new new idle sprite sheet(took away her knees)_1: -1187547315
+      new new idle sprite sheet(took away her knees)_10: 1243979634
+      new new idle sprite sheet(took away her knees)_11: 1216877370
+      new new idle sprite sheet(took away her knees)_12: 2088765519
+      new new idle sprite sheet(took away her knees)_13: 1972505849
+      new new idle sprite sheet(took away her knees)_14: -412165647
+      new new idle sprite sheet(took away her knees)_15: -1453902231
+      new new idle sprite sheet(took away her knees)_2: 426729815
+      new new idle sprite sheet(took away her knees)_3: 2136229616
+      new new idle sprite sheet(took away her knees)_4: 1966838182
+      new new idle sprite sheet(took away her knees)_5: 331721544
+      new new idle sprite sheet(took away her knees)_6: 1173095712
+      new new idle sprite sheet(took away her knees)_7: -147904503
+      new new idle sprite sheet(took away her knees)_8: -1960550063
+      new new idle sprite sheet(took away her knees)_9: -1556107447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

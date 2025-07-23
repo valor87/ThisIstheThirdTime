@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83879df2eac4eff43ba156bd4d3e9ae7
+guid: dfd57c95196d18049b0c66396121a4d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,11 +93,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_0
+      name: Walking sprite sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bedeea168a09984b95d4670c3e55897
-      internalID: 1702115741
+      spriteID: bd246c869c6e93441af98c26cd33bf21
+      internalID: 701950383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_1
+      name: Walking sprite sheet_1
       rect:
         serializedVersion: 2
         x: 17
@@ -132,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb02ab24622f1e44a9b6e3e1241cb69d
-      internalID: -1187547315
+      spriteID: 026c018db51b65345b8e4ce5db0c9df6
+      internalID: -130396737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_2
+      name: Walking sprite sheet_2
       rect:
         serializedVersion: 2
         x: 33
@@ -153,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ea2afaf7096a645bc6c618b1ae4345
-      internalID: 426729815
+      spriteID: 0869750261a576f419b98a2243a14bcb
+      internalID: -750570889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_3
+      name: Walking sprite sheet_3
       rect:
         serializedVersion: 2
         x: 48
@@ -174,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 160d7a810dc56d943891a2ae222a16d5
-      internalID: 2136229616
+      spriteID: c646e20f8b8b2aa4e84ed5e4d0b5e204
+      internalID: 135601215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_4
+      name: Walking sprite sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -195,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baef19c0df47c0240987fee945413a12
-      internalID: 1966838182
+      spriteID: d6d7739c82fb36147ac2498e9b72f73f
+      internalID: -1186786885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_5
+      name: Walking sprite sheet_5
       rect:
         serializedVersion: 2
         x: 17
         y: 64
-        width: 14
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -216,19 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a61941beb33e000429861b7936d43101
-      internalID: 331721544
+      spriteID: 22010fe11a4a1a240a97b171e128eda5
+      internalID: -466307347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_6
+      name: Walking sprite sheet_6
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 64
-        width: 14
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -237,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bf8993050c77d1468a71b49ba90c642
-      internalID: 1173095712
+      spriteID: 54a5dfa871a961b41981ec14ee9fb3b2
+      internalID: 1435936557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_7
+      name: Walking sprite sheet_7
       rect:
         serializedVersion: 2
         x: 48
@@ -258,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace50e3062f06164382d159d2278307b
-      internalID: -147904503
+      spriteID: f7686aa7eb83ff54d8850b974fe9f59e
+      internalID: -623333280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_8
+      name: Walking sprite sheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -279,19 +292,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e42198b5eb5da3e4ca2184f756f61cb3
-      internalID: -1960550063
+      spriteID: f45590ddcd2fb5d40b9e9da94e9441e3
+      internalID: 2012640483
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_9
+      name: Walking sprite sheet_9
       rect:
         serializedVersion: 2
         x: 17
         y: 32
-        width: 14
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -300,19 +313,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97ea200a0b26664aa1078316f7f1aa4
-      internalID: -1556107447
+      spriteID: df42e4832210f5640a41566f23ad5359
+      internalID: 150269217
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_10
+      name: Walking sprite sheet_10
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 32
-        width: 14
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -321,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bd6e5afcc3b2054f991b20b2f65fb5f
-      internalID: 1243979634
+      spriteID: 0dc8cc6bd2a9cdf449e297c92ec0dcf5
+      internalID: -1619711669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_11
+      name: Walking sprite sheet_11
       rect:
         serializedVersion: 2
         x: 48
@@ -342,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60a748ae34bc084abe013f37860f454
-      internalID: 1216877370
+      spriteID: ccb39fc00ee1dd34b970952ac2326728
+      internalID: 1579084167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_12
+      name: Walking sprite sheet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -363,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5578f46322230e4a857d73a4404153c
-      internalID: 2088765519
+      spriteID: eae823bcd0d63554185674cdf17a051f
+      internalID: -12898919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_13
+      name: Walking sprite sheet_13
       rect:
         serializedVersion: 2
         x: 17
@@ -384,19 +397,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f49950faf8dd4d340869634f591f821f
-      internalID: 1972505849
+      spriteID: 5b8ce9d784095214dbdfd549644ea620
+      internalID: 1590323966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_14
+      name: Walking sprite sheet_14
       rect:
         serializedVersion: 2
-        x: 33
+        x: 32
         y: 0
-        width: 14
+        width: 15
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -405,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 547ab3b016a8a9544a4e5d56584956f9
-      internalID: -412165647
+      spriteID: 969a08e51bd58e44ea256fbdc5259698
+      internalID: 2017218862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new new idle sprite sheet(took away her knees)_15
+      name: Walking sprite sheet_15
       rect:
         serializedVersion: 2
         x: 48
@@ -426,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3b583ed81b768e41a923731f5f7a20b
-      internalID: -1453902231
+      spriteID: c9599b245492c2d4db8b5e96e281a83c
+      internalID: 1374434726
       vertices: []
       indices: 
       edges: []
@@ -443,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new new idle sprite sheet(took away her knees)_0: 1702115741
-      new new idle sprite sheet(took away her knees)_1: -1187547315
-      new new idle sprite sheet(took away her knees)_10: 1243979634
-      new new idle sprite sheet(took away her knees)_11: 1216877370
-      new new idle sprite sheet(took away her knees)_12: 2088765519
-      new new idle sprite sheet(took away her knees)_13: 1972505849
-      new new idle sprite sheet(took away her knees)_14: -412165647
-      new new idle sprite sheet(took away her knees)_15: -1453902231
-      new new idle sprite sheet(took away her knees)_2: 426729815
-      new new idle sprite sheet(took away her knees)_3: 2136229616
-      new new idle sprite sheet(took away her knees)_4: 1966838182
-      new new idle sprite sheet(took away her knees)_5: 331721544
-      new new idle sprite sheet(took away her knees)_6: 1173095712
-      new new idle sprite sheet(took away her knees)_7: -147904503
-      new new idle sprite sheet(took away her knees)_8: -1960550063
-      new new idle sprite sheet(took away her knees)_9: -1556107447
+      Walking sprite sheet_0: 701950383
+      Walking sprite sheet_1: -130396737
+      Walking sprite sheet_10: -1619711669
+      Walking sprite sheet_11: 1579084167
+      Walking sprite sheet_12: -12898919
+      Walking sprite sheet_13: 1590323966
+      Walking sprite sheet_14: 2017218862
+      Walking sprite sheet_15: 1374434726
+      Walking sprite sheet_2: -750570889
+      Walking sprite sheet_3: 135601215
+      Walking sprite sheet_4: -1186786885
+      Walking sprite sheet_5: -466307347
+      Walking sprite sheet_6: 1435936557
+      Walking sprite sheet_7: -623333280
+      Walking sprite sheet_8: 2012640483
+      Walking sprite sheet_9: 150269217
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

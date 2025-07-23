@@ -18,8 +18,7 @@ public class GhostSpotLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(guagepos);
-        SpotGuage.transform.position = Player.transform.position;
+       
         if (sp.bounds.Contains(Player.transform.position))
         {
             GetComponent<SpriteRenderer>().color = Color.blue;

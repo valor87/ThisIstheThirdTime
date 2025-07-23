@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dfd57c95196d18049b0c66396121a4d7
+guid: 764f6281aa8d36a498d09f7e0808e94c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,11 +93,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walking sprite sheet_0
+      name: Post crash - idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd246c869c6e93441af98c26cd33bf21
-      internalID: 701950383
+      spriteID: 081095df1f7acb54eb1e1ec4178f6aa6
+      internalID: -1066275498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_1
+      name: Post crash - idle_1
       rect:
         serializedVersion: 2
         x: 17
         y: 96
-        width: 14
+        width: 13
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -132,19 +145,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026c018db51b65345b8e4ce5db0c9df6
-      internalID: -130396737
+      spriteID: 0a3ffcd90b5f1014086a5f4184353653
+      internalID: 648322776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_2
+      name: Post crash - idle_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 34
         y: 96
-        width: 14
+        width: 13
         height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -153,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0869750261a576f419b98a2243a14bcb
-      internalID: -750570889
+      spriteID: 38f863187e92371479980bd835ef3c3a
+      internalID: -1988873800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_3
+      name: Post crash - idle_3
       rect:
         serializedVersion: 2
         x: 48
@@ -174,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c646e20f8b8b2aa4e84ed5e4d0b5e204
-      internalID: 135601215
+      spriteID: b52cf3174e818a342bd5a2923e9954d2
+      internalID: 938189386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_4
+      name: Post crash - idle_4
       rect:
         serializedVersion: 2
         x: 0
         y: 64
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d7739c82fb36147ac2498e9b72f73f
-      internalID: -1186786885
+      spriteID: d01693f312706db4d8a7700bbf80017b
+      internalID: 43813850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_5
+      name: Post crash - idle_5
       rect:
         serializedVersion: 2
         x: 17
         y: 64
-        width: 15
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22010fe11a4a1a240a97b171e128eda5
-      internalID: -466307347
+      spriteID: 2f81d976a7fb35545a81304bf9c76a1b
+      internalID: 2074351822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_6
+      name: Post crash - idle_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 64
-        width: 15
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a5dfa871a961b41981ec14ee9fb3b2
-      internalID: 1435936557
+      spriteID: a95a2869353aec44db64ef9077f2a561
+      internalID: -256637561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_7
+      name: Post crash - idle_7
       rect:
         serializedVersion: 2
         x: 48
         y: 64
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7686aa7eb83ff54d8850b974fe9f59e
-      internalID: -623333280
+      spriteID: cf7a9029e8105f14793a89729e65e9c1
+      internalID: -880777216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_8
+      name: Post crash - idle_8
       rect:
         serializedVersion: 2
         x: 0
         y: 32
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +292,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f45590ddcd2fb5d40b9e9da94e9441e3
-      internalID: 2012640483
+      spriteID: bcbba16995785bb4eb4444dc842e1194
+      internalID: -1005481496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_9
+      name: Post crash - idle_9
       rect:
         serializedVersion: 2
         x: 17
         y: 32
-        width: 15
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,20 +313,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df42e4832210f5640a41566f23ad5359
-      internalID: 150269217
+      spriteID: 298ebc46e78cf6647b371918e6c7e641
+      internalID: -1562637319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_10
+      name: Post crash - idle_10
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 32
-        width: 15
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,20 +334,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc8cc6bd2a9cdf449e297c92ec0dcf5
-      internalID: -1619711669
+      spriteID: 785f03d9a32727e42936abadb350e7a5
+      internalID: -1647072952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_11
+      name: Post crash - idle_11
       rect:
         serializedVersion: 2
         x: 48
         y: 32
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -342,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccb39fc00ee1dd34b970952ac2326728
-      internalID: 1579084167
+      spriteID: c9f2b84d098ff534ba9b1276b26adea2
+      internalID: -671104752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_12
+      name: Post crash - idle_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -363,20 +376,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eae823bcd0d63554185674cdf17a051f
-      internalID: -12898919
+      spriteID: 66eeaa1e11a1bbd42be187109041da4f
+      internalID: -956792188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_13
+      name: Post crash - idle_13
       rect:
         serializedVersion: 2
         x: 17
         y: 0
-        width: 14
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,20 +397,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8ce9d784095214dbdfd549644ea620
-      internalID: 1590323966
+      spriteID: 4171289b4f3ea7142a99050dab54a8a1
+      internalID: -1367967792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_14
+      name: Post crash - idle_14
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 15
-        height: 31
+        width: 13
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,20 +418,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 969a08e51bd58e44ea256fbdc5259698
-      internalID: 2017218862
+      spriteID: a0dd4e8430c64264596735b77adf706d
+      internalID: 546615327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walking sprite sheet_15
+      name: Post crash - idle_15
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 31
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,8 +439,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9599b245492c2d4db8b5e96e281a83c
-      internalID: 1374434726
+      spriteID: dd3c16e92a30d4249a9bdd2cfc906846
+      internalID: 1664859441
       vertices: []
       indices: 
       edges: []
@@ -443,22 +456,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Walking sprite sheet_0: 701950383
-      Walking sprite sheet_1: -130396737
-      Walking sprite sheet_10: -1619711669
-      Walking sprite sheet_11: 1579084167
-      Walking sprite sheet_12: -12898919
-      Walking sprite sheet_13: 1590323966
-      Walking sprite sheet_14: 2017218862
-      Walking sprite sheet_15: 1374434726
-      Walking sprite sheet_2: -750570889
-      Walking sprite sheet_3: 135601215
-      Walking sprite sheet_4: -1186786885
-      Walking sprite sheet_5: -466307347
-      Walking sprite sheet_6: 1435936557
-      Walking sprite sheet_7: -623333280
-      Walking sprite sheet_8: 2012640483
-      Walking sprite sheet_9: 150269217
+      Post crash - idle_0: -1066275498
+      Post crash - idle_1: 648322776
+      Post crash - idle_10: -1647072952
+      Post crash - idle_11: -671104752
+      Post crash - idle_12: -956792188
+      Post crash - idle_13: -1367967792
+      Post crash - idle_14: 546615327
+      Post crash - idle_15: 1664859441
+      Post crash - idle_2: -1988873800
+      Post crash - idle_3: 938189386
+      Post crash - idle_4: 43813850
+      Post crash - idle_5: 2074351822
+      Post crash - idle_6: -256637561
+      Post crash - idle_7: -880777216
+      Post crash - idle_8: -1005481496
+      Post crash - idle_9: -1562637319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
