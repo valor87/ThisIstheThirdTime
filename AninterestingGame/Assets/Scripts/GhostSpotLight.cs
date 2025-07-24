@@ -1,33 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GhostSpotLight : MonoBehaviour
 {
-    public GameObject Player;
-    public GameObject SpotGuage;
-    SpriteRenderer sp;
-    Vector2 guagepos;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject slider;
+    public float visionmeter;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        sp = GetComponent<SpriteRenderer>();
-        guagepos = Camera.main.ScreenToWorldPoint(SpotGuage.transform.position);
+            Debug.Log("collision");
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("staying collision");
+        visionmeter += 0.1f;
+        slider.GetComponent<Slider>().value = visionmeter;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void showint(float temp)
     {
-       
-        if (sp.bounds.Contains(Player.transform.position))
-        {
-            GetComponent<SpriteRenderer>().color = Color.blue;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = Color.red;
-        }
-
+        temp = visionmeter;
     }
-
 }
