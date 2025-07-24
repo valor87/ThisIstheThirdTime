@@ -12,11 +12,6 @@ public class AnimateNPC : MonoBehaviour
     public float timetowaitforanimation;
     public int animationtochangeto;
     bool running; 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
