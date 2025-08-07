@@ -989,7 +989,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299385205}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1567,13 +1567,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387505175}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.46000096, w: 0.8879185}
-  m_LocalPosition: {x: -3.19, y: -1.34, z: 0.0674467}
+  m_LocalRotation: {x: -0, y: -0, z: -0.5694283, w: 0.82204103}
+  m_LocalPosition: {x: -3.3, y: -0.79, z: 0.0674467}
   m_LocalScale: {x: -3.3923616, y: 5.4606614, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318914811}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -54.774}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.421}
 --- !u!60 &387505179
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -20460,6 +20460,7 @@ GameObject:
   - component: {fileID: 781218280}
   - component: {fileID: 781218279}
   - component: {fileID: 781218278}
+  - component: {fileID: 781218281}
   m_Layer: 0
   m_Name: Circle (3)
   m_TagString: Untagged
@@ -20528,9 +20529,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -20548,13 +20549,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781218277}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.23, y: -0.76, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.55, z: 0}
+  m_LocalScale: {x: 0.51065904, y: 0.5275694, z: 0.6660546}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1580101472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781218281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781218277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17640d223b876b94cbddd2390b5ddcda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghosttriangle: {fileID: 387505175}
+  fade: 0
 --- !u!1 &782541141
 GameObject:
   m_ObjectHideFlags: 0
@@ -20801,11 +20816,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 0}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -21094,6 +21109,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 796328632846717646, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744662945}
+    - targetCorrespondingSourceObject: {fileID: 796328632846717646, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 781218280}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
 --- !u!1 &932050364
@@ -22460,6 +22478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236680846}
   - component: {fileID: 1236680847}
+  - component: {fileID: 1236680848}
   m_Layer: 0
   m_Name: Ghost head
   m_TagString: Untagged
@@ -22534,6 +22553,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1236680848
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236680845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 007cff4565c61184988fc20ef1ea8eb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1244132245
 GameObject:
   m_ObjectHideFlags: 0
@@ -24293,7 +24333,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540023132}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -60665,5 +60705,4 @@ SceneRoots:
   - {fileID: 1855648446}
   - {fileID: 408221155}
   - {fileID: 1893262659}
-  - {fileID: 781218280}
   - {fileID: 355350125}

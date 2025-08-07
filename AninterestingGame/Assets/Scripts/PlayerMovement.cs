@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public bool canMove = true;
     Rigidbody2D Rb;
-
+    SpriteRenderer sr;
     public Animator PA;
     public float speedani;
     public float speedani2;
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
-         
+        sr = GetComponent<SpriteRenderer>();
     }
     private void FixedUpdate()
     {
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
        
         if (Input.GetKey("d"))
         {
-            GetComponent<SpriteRenderer>().flipX = true;
+            sr.flipX = true;
             speedani = -1;
             speedani2 = 0;
         }
@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         {
             speedani = -1;
             speedani2 = 0;
-            GetComponent<SpriteRenderer>().flipX = false;
+            sr.flipX = false;
         }
     
         else if (Input.GetKey("s"))
