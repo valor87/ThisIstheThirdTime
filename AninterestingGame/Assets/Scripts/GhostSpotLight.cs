@@ -26,8 +26,11 @@ public class GhostSpotLight : MonoBehaviour
     {
         adding = true;
         Debug.Log("staying collision");
-        visionmeter += 5 * Time.deltaTime;
-        
+        if (visionmeter < slider.GetComponent<Slider>().maxValue)
+        {
+            visionmeter += 5 * Time.deltaTime;
+        }
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {

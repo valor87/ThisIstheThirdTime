@@ -6,6 +6,7 @@ using UnityEngine;
 public class GhostMovement : MonoBehaviour
 {
     public float t = 0;
+    public float speed;
     public Vector2 start;
     public Vector2 end;
     Vector2 destination;
@@ -41,21 +42,21 @@ public class GhostMovement : MonoBehaviour
         {
             if (ghostpos.x > destination.x)
             {
-                ghostpos.x -= 0.001f;
+                ghostpos.x -= speed * Time.deltaTime;
                 transform.localScale = new Vector2(1, 0.81438f);
             }
             if (ghostpos.x < destination.x)
             {
-                ghostpos.x += 0.001f;
+                ghostpos.x += speed * Time.deltaTime;
                 transform.localScale = new Vector2(-1, 0.81438f);
             }
             if (ghostpos.y > destination.y)
             {
-                ghostpos.y -= 0.001f;
+                ghostpos.y -= speed * Time.deltaTime;
             }
             if (ghostpos.y < destination.y)
             {
-                ghostpos.y += 0.001f;
+                ghostpos.y += speed * Time.deltaTime;
             }
             
                 transform.position = ghostpos;

@@ -18,9 +18,9 @@ public class GhosthandFade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fade = ghosttriangle.GetComponent<GhostSpotLight>().visionmeter/50;
+        fade = ghosttriangle.GetComponent<GhostSpotLight>().visionmeter/25;
         sp.color = new Color(255, 255, 255, fade);
-        if (ghosttriangle.GetComponent<GhostSpotLight>().visionmeter >= 25)
+        if (ghosttriangle.GetComponent<GhostSpotLight>().visionmeter >= 12)
         {
             anitor.speed = 2;
             anitor.SetBool("Secondhalf", true);
