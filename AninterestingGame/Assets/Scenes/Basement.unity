@@ -566,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: 0
-  speed: 0
+  speed: 1
   start: {x: 7, y: 2}
   end: {x: -7, y: -2}
   curve:
@@ -1486,6 +1486,7 @@ GameObject:
   - component: {fileID: 387505177}
   - component: {fileID: 387505176}
   - component: {fileID: 387505179}
+  - component: {fileID: 387505180}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -1550,8 +1551,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.29803923}
-  m_FlipX: 0
+  m_Color: {r: 0.8627451, g: 0.78039217, b: 0.9372549, a: 0.29803923}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -1568,15 +1569,36 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387505175}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.5694283, w: 0.82204103}
-  m_LocalPosition: {x: -3.3, y: -0.79, z: 0.0674467}
-  m_LocalScale: {x: -3.3923616, y: 5.4606614, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0048254346, w: 0.9999884}
+  m_LocalPosition: {x: -1.6204, y: 0.64, z: 0.0674467}
+  m_LocalScale: {x: -3.7661767, y: 6.3194327, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318914811}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -69.421}
---- !u!60 &387505179
-PolygonCollider2D:
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.553}
+--- !u!95 &387505179
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387505175}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 01b52540286e725479857476597c75e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &387505180
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1607,7 +1629,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.5180692, y: -0.3604269}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -1617,12 +1639,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9630629, y: 0.32241118}
+  m_EdgeRadius: 0
 --- !u!1 &395127006
 GameObject:
   m_ObjectHideFlags: 0
@@ -21767,6 +21786,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c8389398abddebe468fec9a67622468a, type: 2}
+    - target: {fileID: 7824482230922175695, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7824482230922175695, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
       propertyPath: m_SortingOrder
       value: 6

@@ -12,26 +12,36 @@ public class ShowtheGameobject : MonoBehaviour
     public TextAsset text;
     public bool choice;
     public Color textcolor;
-    
-  
+
+    MonoBehaviour screentect;
+    private void Start()
+    {
+        screentect = GetComponent<showonscreentext>();
+    }
     void Update()
     {
-        
-        if (GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space") && !showObject.GetComponent<showonscreentext>().overlayon)
+
+        if (GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space"))
         {
-            textMp.color = textcolor;
-            if (text != null)
+            if (screentect != null && !showObject.GetComponent<showonscreentext>().overlayon)
             {
-                
-                showObject.GetComponent<showonscreentext>().textasset = text;
-                showObject.GetComponent<showonscreentext>().playerchoice = choice;
-                if (doorUnlock != null)
+                if (text != null)
                 {
-                    doorUnlock.GetComponent<Doorlockedscript>().doorlocked = false;
+                    textMp.color = textcolor;
+                    showObject.GetComponent<showonscreentext>().textasset = text;
+                    showObject.GetComponent<showonscreentext>().playerchoice = choice;
+                    if (doorUnlock != null)
+                    {
+                        doorUnlock.GetComponent<Doorlockedscript>().doorlocked = false;
+                    }
                 }
             }
-            showObject.SetActive(true); // show the object
-
+            else
+            {
+                showObject.GetComponent<showonscreentext>().textasset = text;
+                showObject.GetComponent<showonscreentext>().playerchoice = choice;
+                showObject.SetActive(true); // show the object
+            }
         }
     }
 }
