@@ -1,22 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GhostSpotLight : MonoBehaviour
 {
-    public GameObject slider;
+    public GameObject Manager;
     public float visionmeter;
     public bool adding;
+
+    private void Start()
+    {
+         
+    }
     private void Update()
     {
-        if (visionmeter > 0 && !adding)
+
+        if (Manager.GetComponent<GhostVisonManager>().visionmetermanager > 0 && !Manager.GetComponent<GhostVisonManager>().adding)
         {
-
-            visionmeter -= 5 * Time.deltaTime;
-
+            Manager.GetComponent<GhostVisonManager>().visionmetermanager -= 5 * Time.deltaTime;
         }
-        slider.GetComponent<Slider>().value = visionmeter;
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -24,20 +29,16 @@ public class GhostSpotLight : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        adding = true;
+        Manager.GetComponent<GhostVisonManager>().adding = true;
         Debug.Log("staying collision");
-        if (visionmeter < slider.GetComponent<Slider>().maxValue)
-        {
-            visionmeter += 5 * Time.deltaTime;
-        }
 
+        Manager.GetComponent<GhostVisonManager>().visionmetermanager += 5 * Time.deltaTime;
+        
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        adding = false;
+        Manager.GetComponent<GhostVisonManager>().adding = false;
     }
-    public void showint(float temp)
-    {
-        temp = visionmeter;
-    }
+   
 }
