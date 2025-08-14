@@ -16,7 +16,7 @@ public class GhostSpotLight : MonoBehaviour
     }
     private void Update()
     {
-
+       
         if (Manager.GetComponent<GhostVisonManager>().visionmetermanager > 0 && !Manager.GetComponent<GhostVisonManager>().adding)
         {
             Manager.GetComponent<GhostVisonManager>().visionmetermanager -= 5 * Time.deltaTime;

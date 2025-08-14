@@ -34,12 +34,13 @@ public class ShowtheGameobject : MonoBehaviour
                     {
                         doorUnlock.GetComponent<Doorlockedscript>().doorlocked = false;
                     }
+                    showObject.GetComponent<showonscreentext>().textasset = text;
+                    showObject.GetComponent<showonscreentext>().playerchoice = choice;
                 }
             }
             else
             {
-                showObject.GetComponent<showonscreentext>().textasset = text;
-                showObject.GetComponent<showonscreentext>().playerchoice = choice;
+                
                 showObject.SetActive(true); // show the object
             }
         }
