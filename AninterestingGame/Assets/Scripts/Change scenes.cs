@@ -11,19 +11,19 @@ public class Changescenes : MonoBehaviour
     float fadeamount;
     public bool isrunning;
     public bool changed;
-    void Update()
+    
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (GetComponent<SpriteRenderer>().bounds.Contains(Player.transform.position) && Input.GetKeyDown("space") && chanewithconfermation)
+        if (Input.GetKeyDown("space") && chanewithconfermation)
         {
             StartCoroutine(CameraFade(SceneIndexNum)); // starts the fading on the camera
         }
-        else if (GetComponent<SpriteRenderer>().bounds.Contains(Player.transform.position) && !chanewithconfermation)
+        else if (!chanewithconfermation)
         {
             StartCoroutine(CameraFade(SceneIndexNum)); // starts the fading on the camera
-           
+
         }
     }
-
     private IEnumerator CameraFade(int scenenum)
     {
         isrunning = true; // runs the code only onces
