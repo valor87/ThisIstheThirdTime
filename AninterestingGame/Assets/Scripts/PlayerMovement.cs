@@ -24,12 +24,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
-
             Hinput = Input.GetAxis("Horizontal") * speed;
             Vinput = Input.GetAxis("Vertical") * speed;
             Rb.velocity = new Vector2(Hinput, Vinput);
             changeanimation();
-
         }
         
     }
@@ -47,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
             PA.speed = 1;
             speed = 5;
         }
-
+        PA.SetFloat("Directionx", speedani);
+        PA.SetFloat("Directiony", speedani2);
     }
     private void changeanimation()
     {
@@ -80,9 +79,6 @@ public class PlayerMovement : MonoBehaviour
             speedani = 0;
             speedani2 = 0;
         }
-        
-        PA.SetFloat("Directionx", speedani);
-        PA.SetFloat("Directiony", speedani2);
     }
 
 }
