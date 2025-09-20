@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     [SerializeField] GameObject Esther;
+    [SerializeField] List<GameObject> Triggercircles;
     [SerializeField] Vector3 startpos;
     [SerializeField] Vector3 endpos;
     Vector3 currentpos;
@@ -17,37 +18,39 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         GameObject Esther = collision.gameObject;
-        if (Esther.GetComponent<PlayerMovement>() != null) {
-            Esther.GetComponent<PlayerMovement>().canMove = false;
-            Esther.GetComponent<PlayerMovement>().speedani2 = 0;
-            Esther.GetComponent<PlayerMovement>().speedani = 0;
-        }
-        currentpos = transform.position;
-        Debug.Log("running");
-       
-        transform.position = Vector3.Lerp(currentpos, endpos, ratio);
-        Esther.transform.position = transform.position;
-
-        if (round(Esther.transform.position) == round(endpos))
-        {
-            currentpos = endpos;
-            endpos = startpos;
-            startpos = currentpos;
-            Debug.Log("Platform done");
-            if (startpos.x <= endpos.x)
-            {
-                Esther.transform.position -= new Vector3(1, 0);
-                if (Esther.GetComponent<PlayerMovement>() != null)
-                {
-                    Esther.GetComponent<PlayerMovement>().canMove = true;
-                }
+        if (Esther != Triggercircles[0] && Esther != Triggercircles[1]) {
+            if (Esther.GetComponent<PlayerMovement>() != null) {
+                Esther.GetComponent<PlayerMovement>().canMove = false;
+                Esther.GetComponent<PlayerMovement>().speedani2 = 0;
+                Esther.GetComponent<PlayerMovement>().speedani = 0;
             }
-            else
+            currentpos = transform.position;
+            Debug.Log("running");
+
+            transform.position = Vector3.Lerp(currentpos, endpos, ratio);
+            Esther.transform.position = transform.position;
+
+            if (round(Esther.transform.position) == round(endpos))
             {
-                Esther.transform.position += new Vector3(1, 0);
-                if (Esther.GetComponent<PlayerMovement>() != null)
+                currentpos = endpos;
+                endpos = startpos;
+                startpos = currentpos;
+                Debug.Log("Platform done");
+                if (startpos.x <= endpos.x)
                 {
-                    Esther.GetComponent<PlayerMovement>().canMove = true;
+                    Esther.transform.position -= new Vector3(1, 0);
+                    if (Esther.GetComponent<PlayerMovement>() != null)
+                    {
+                        Esther.GetComponent<PlayerMovement>().canMove = true;
+                    }
+                }
+                else
+                {
+                    Esther.transform.position += new Vector3(1, 0);
+                    if (Esther.GetComponent<PlayerMovement>() != null)
+                    {
+                        Esther.GetComponent<PlayerMovement>().canMove = true;
+                    }
                 }
             }
         }

@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class CabinetObject : MonoBehaviour
 {
+    public Transform esthertransform;
     public Transform othercloset;
+    public List<GameObject> ignoreobject;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Triggering");
-
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKey("space") && esthertransform.position == collision.gameObject.transform.position)
         {
-            if (othercloset != null ) {
-                collision.transform.position = othercloset.position;
-            }
+         collision.transform.position = othercloset.position - new Vector3(1,0,0);
         }
     }
 }
