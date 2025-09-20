@@ -554,12 +554,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109734628}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9873, y: 39.5724, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.1527004, y: -3.017601, z: 1.5621371}
   m_LocalScale: {x: 7.835256, y: 0.8290116, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &117133556
 GameObject:
@@ -2855,7 +2855,7 @@ GameObject:
   - component: {fileID: 378994677}
   - component: {fileID: 378994676}
   m_Layer: 0
-  m_Name: Square (6)
+  m_Name: Closetbounds (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2982,12 +2982,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378994675}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.4986, y: 45.3, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.6414003, y: 2.709999, z: 1.5621371}
   m_LocalScale: {x: 12.936058, y: 0.12923928, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &387505175
 GameObject:
@@ -4593,12 +4593,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509109613}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9168, y: 37.8325, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.2232003, y: -4.7574997, z: 1.5621371}
   m_LocalScale: {x: 7.759553, y: 0.27126446, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &553530978
 GameObject:
@@ -25560,7 +25560,7 @@ GameObject:
   - component: {fileID: 879582320}
   - component: {fileID: 879582319}
   m_Layer: 0
-  m_Name: Square (7)
+  m_Name: Closetbounds (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25687,12 +25687,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879582318}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.09, y: 40.9616, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.05, y: -1.6283989, z: 1.5621371}
   m_LocalScale: {x: 0.11739247, y: 8.763725, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890694798
 GameObject:
@@ -27433,7 +27433,7 @@ GameObject:
   - component: {fileID: 1167784700}
   - component: {fileID: 1167784699}
   m_Layer: 0
-  m_Name: Square (8)
+  m_Name: Closetbounds (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27560,12 +27560,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167784698}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.91, y: 40.9875, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2300005, y: -1.6025009, z: 1.5621371}
   m_LocalScale: {x: 0.11739247, y: 8.711341, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175995325
 GameObject:
@@ -28611,6 +28611,12 @@ Transform:
   - {fileID: 1999160307}
   - {fileID: 1824988343}
   - {fileID: 1970054296}
+  - {fileID: 1675975261}
+  - {fileID: 378994679}
+  - {fileID: 879582322}
+  - {fileID: 1167784702}
+  - {fileID: 109734631}
+  - {fileID: 509109616}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1307127005
@@ -68472,7 +68478,7 @@ GameObject:
   - component: {fileID: 1675975259}
   - component: {fileID: 1675975258}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: Closetbounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68599,12 +68605,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675975257}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5003, y: 36.65, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.6397004, y: -5.9399986, z: 1.5621371}
   m_LocalScale: {x: 12.92437, y: 0.12923928, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1292263566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1681988954
 GameObject:
@@ -71969,13 +71975,7 @@ SceneRoots:
   - {fileID: 837980968}
   - {fileID: 1459302494}
   - {fileID: 1152847273}
-  - {fileID: 109734631}
-  - {fileID: 509109616}
   - {fileID: 1462974370}
   - {fileID: 324515689}
   - {fileID: 1309726729}
-  - {fileID: 1675975261}
-  - {fileID: 378994679}
-  - {fileID: 879582322}
-  - {fileID: 1167784702}
   - {fileID: 1292263566}
