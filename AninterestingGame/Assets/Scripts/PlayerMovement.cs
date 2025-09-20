@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove)
         {
-            Hinput = Input.GetAxis("Horizontal") * speed;
-            Vinput = Input.GetAxis("Vertical") * speed;
+            Hinput = Input.GetAxisRaw("Horizontal") * speed;
+            Vinput = Input.GetAxisRaw("Vertical") * speed ;
             Rb.velocity = new Vector2(Hinput, Vinput);
             changeanimation();
         }
@@ -37,13 +37,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey("left shift"))
         {
-            speed = 7;
+            speed = 6;
             PA.speed = 2;
         }
         else
         {
             PA.speed = 1;
-            speed = 5;
+            speed = 4;
         }
         PA.SetFloat("Directionx", speedani);
         PA.SetFloat("Directiony", speedani2);

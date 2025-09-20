@@ -6917,6 +6917,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1323688273}
     - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
+      propertyPath: textasset
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955594216065118682, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: Triggerbox
       value: 
       objectReference: {fileID: 488866035}
@@ -7192,6 +7196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424019714}
   - component: {fileID: 424019713}
+  - component: {fileID: 424019715}
   m_Layer: 0
   m_Name: Bean bag part2(16x16) (1)
   m_TagString: Untagged
@@ -7266,6 +7271,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1300133618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &424019715
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424019712}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &449569748
 GameObject:
   m_ObjectHideFlags: 0
@@ -7429,7 +7479,7 @@ Transform:
   m_GameObject: {fileID: 488866035}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6001, y: 6.1653, z: 0}
+  m_LocalPosition: {x: 6.84, y: 6.1653, z: 0}
   m_LocalScale: {x: 1.097654, y: 0.74563235, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7569,7 +7619,7 @@ MonoBehaviour:
   textMp: {fileID: 0}
   Esther: {fileID: 1323688273}
   showObject: {fileID: 698811436}
-  text: {fileID: 0}
+  text: {fileID: 4900000, guid: b17bf2f527e02d147a1e09a2c6ef5c0a, type: 3}
   choice: 0
   textcolor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &519919619
@@ -7633,7 +7683,7 @@ Transform:
   m_GameObject: {fileID: 519919617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.41, y: 6.24, z: 0}
+  m_LocalPosition: {x: 6.81, y: 6.48, z: 0}
   m_LocalScale: {x: 1.6522866, y: 1.3946, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9041,6 +9091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695971557}
   - component: {fileID: 695971556}
+  - component: {fileID: 695971558}
   m_Layer: 0
   m_Name: Bean bag(16x16) (1)
   m_TagString: Untagged
@@ -9115,6 +9166,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1300133618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &695971558
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695971555}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &698811436
 GameObject:
   m_ObjectHideFlags: 0
@@ -11157,7 +11253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9064267455950705183, guid: 48b9d7e88cf07af44880a04912855994, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11798,6 +11894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283558514}
   - component: {fileID: 1283558513}
+  - component: {fileID: 1283558515}
   m_Layer: 0
   m_Name: Bean bag(16x16)
   m_TagString: Untagged
@@ -11872,6 +11969,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1300133618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1283558515
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283558512}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1289146095
 GameObject:
   m_ObjectHideFlags: 0
@@ -12108,6 +12250,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 796328632846717646, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8580112157394606530, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168400296773787617, guid: 8b331274b6f82c44d941e9eac6ec16d5, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12818,6 +12968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490100551}
   - component: {fileID: 1490100550}
+  - component: {fileID: 1490100552}
   m_Layer: 0
   m_Name: Bean bag part2(16x16)
   m_TagString: Untagged
@@ -12892,6 +13043,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1300133618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1490100552
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490100549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1507223555
 GameObject:
   m_ObjectHideFlags: 0
@@ -14135,7 +14331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4411715503986629825, guid: 2ea91eaa44ba430439a09e6ccf6ed97e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7132593234368333195, guid: 2ea91eaa44ba430439a09e6ccf6ed97e, type: 3}
       propertyPath: m_Color.a

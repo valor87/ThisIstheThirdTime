@@ -23,10 +23,14 @@ public class ShowtheGameobject : MonoBehaviour
 
         if (GetComponent<SpriteRenderer>().bounds.Contains(Esther.transform.position) && Input.GetKeyDown("space"))
         {
-            if (screentect != null && !showObject.GetComponent<showonscreentext>().overlayon)
+           
+            if (!showObject.GetComponent<showonscreentext>().overlayon)
             {
+                showObject.SetActive(true);
+                showObject.GetComponent<showonscreentext>().textasset = text;
                 if (text != null)
                 {
+                    
                     textMp.color = textcolor;
                     showObject.GetComponent<showonscreentext>().textasset = text;
                     showObject.GetComponent<showonscreentext>().playerchoice = choice;
@@ -38,11 +42,7 @@ public class ShowtheGameobject : MonoBehaviour
                     showObject.GetComponent<showonscreentext>().playerchoice = choice;
                 }
             }
-            else
-            {
-                
-                showObject.SetActive(true); // show the object
-            }
+            
         }
     }
 }
