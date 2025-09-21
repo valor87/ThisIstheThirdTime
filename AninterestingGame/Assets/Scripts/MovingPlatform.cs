@@ -17,7 +17,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        GameObject Esther = collision.gameObject;
+         Esther = collision.gameObject;
         if (Esther != Triggercircles[0] && Esther != Triggercircles[1]) {
             if (Esther.GetComponent<PlayerMovement>() != null) {
                 Esther.GetComponent<PlayerMovement>().canMove = false;
@@ -25,7 +25,6 @@ public class MovingPlatform : MonoBehaviour
                 Esther.GetComponent<PlayerMovement>().speedani = 0;
             }
             currentpos = transform.position;
-            Debug.Log("running");
 
             transform.position = Vector3.Lerp(currentpos, endpos, ratio);
             Esther.transform.position = transform.position;
@@ -35,27 +34,37 @@ public class MovingPlatform : MonoBehaviour
                 currentpos = endpos;
                 endpos = startpos;
                 startpos = currentpos;
-                Debug.Log("Platform done");
-                if (startpos.x <= endpos.x)
-                {
-                    Esther.transform.position -= new Vector3(1, 0);
-                    if (Esther.GetComponent<PlayerMovement>() != null)
-                    {
-                        Esther.GetComponent<PlayerMovement>().canMove = true;
-                    }
-                }
-                else
-                {
-                    Esther.transform.position += new Vector3(1, 0);
-                    if (Esther.GetComponent<PlayerMovement>() != null)
-                    {
-                        Esther.GetComponent<PlayerMovement>().canMove = true;
-                    }
-                }
+
+                checkPlacement(startpos, endpos);
             }
         }
     }
 
+    private void checkPlacement(Vector3 StartPos, Vector3 EndPos)
+    {
+        if (StartPos.y < EndPos.y)
+        {
+            Esther.transform.position += Vector3.down;
+        }
+        else if(StartPos.y > EndPos.y)
+        {
+            Esther.transform.position += Vector3.up;
+        }
+
+        if (round(StartPos).x > round(EndPos).x)
+        {
+            Esther.transform.position += Vector3.right;
+        }
+        else if(round(StartPos).x < round(EndPos).x)
+        {
+            Esther.transform.position -= Vector3.right;
+        }
+
+        if (Esther.GetComponent<PlayerMovement>() != null)
+        {
+            Esther.GetComponent<PlayerMovement>().canMove = true;
+        }
+    }
     private Vector3 round(Vector3 pos)
     {
        pos.x = Mathf.Round(pos.x);
