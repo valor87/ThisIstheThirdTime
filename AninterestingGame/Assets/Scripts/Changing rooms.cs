@@ -28,6 +28,7 @@ public class Changingrooms : MonoBehaviour
 
     private IEnumerator CameraFade()
     {
+        MainCameraFadeBox.SetActive(true);
         isrunning = true; // runs the code only onces
         Esther.GetComponent<PlayerMovement>().canMove = false; // stop the player from moving
         while (fadeamount < 3)
@@ -49,5 +50,6 @@ public class Changingrooms : MonoBehaviour
         Esther.GetComponent<PlayerMovement>().canMove = true; // give movement back
         isrunning = false; // set up so it can run again
         changed = false;
+        MainCameraFadeBox.SetActive(false);
     }
 }
