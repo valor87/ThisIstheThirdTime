@@ -44,7 +44,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (StartPos.y < EndPos.y)
         {
-            Esther.transform.position += Vector3.down;
+            Esther.transform.position += Vector3.down * 1.5f;
         }
         else if(StartPos.y > EndPos.y)
         {
