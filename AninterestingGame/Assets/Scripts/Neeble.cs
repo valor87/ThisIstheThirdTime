@@ -37,18 +37,6 @@ public class Neeble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log(transform.eulerAngles);
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(transform.eulerAngles);
-        }
-
-        else if (seconddialGO != null && transform.eulerAngles == endrotation && seconddialGO.transform.eulerAngles == endrotation2dial)
-        {
-            // win again
-            Debug.Log("you win x2");
-        }
-
         if (ButtonisOn)
         {
             transform.eulerAngles = needleTransform - tempvector;
@@ -192,7 +180,7 @@ public class Neeble : MonoBehaviour
         }
         if (buttons[4] != null)
         {
-            ButonTwoIsOn = true; // staarts the dial from taking input
+            ButonTwoIsOn = true; // starts the dial from taking input
             buttons[4].GetComponent<Image>().sprite = listofbuttons[2];
         }
         buttons[0].GetComponent<Image>().sprite = listofbuttons[0];
